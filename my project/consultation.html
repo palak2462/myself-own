@@ -1,0 +1,4023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Consultation | Advocate Portfolio</title>
+
+    <link rel="stylesheet" href="consultation.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ==========================================
+   GOOGLE FONT
+========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+        /* ==========================================
+   GLOBAL RESET
+========================================== */
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        ul {
+
+            list-style: none;
+
+        }
+
+
+        :root {
+
+
+            --primary: #0B1F3A;
+
+            --gold: #C9A227;
+
+            --white: #ffffff;
+
+            --dark: #111;
+
+            --gray: #666;
+
+            --light: #f8f8f8;
+
+            --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+
+        }
+
+
+
+        /* ==========================================
+   HEADER
+========================================== */
+
+
+        header {
+
+            width: 100%;
+
+            padding: 18px 8%;
+
+            background: var(--primary);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: var(--gold);
+
+            font-size: 26px;
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+
+
+        nav ul li a {
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            transition: .3s;
+
+        }
+
+
+
+        nav ul li a:hover {
+
+            color: var(--gold);
+
+        }
+
+
+
+        /* ==========================================
+   HERO SECTION
+========================================== */
+
+
+        .consultation-hero {
+
+
+            height: 75vh;
+
+
+            background:
+
+                linear-gradient(rgba(11, 31, 58, .85),
+
+                    rgba(11, 31, 58, .85)),
+
+                url("consultation-bg.jpg");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+
+            color: white;
+
+
+        }
+
+
+
+        .overlay {
+
+            width: 85%;
+
+            max-width: 900px;
+
+        }
+
+
+
+        .overlay h1 {
+
+
+            font-size: 55px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .overlay p {
+
+
+            font-size: 19px;
+
+            color: #ddd;
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+        .hero-btn {
+
+
+            display: inline-block;
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 14px 35px;
+
+            border-radius: 5px;
+
+            font-weight: 600;
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .hero-btn:hover {
+
+
+            background: white;
+
+            color: var(--primary);
+
+            transform: translateY(-5px);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   INTRO SECTION
+========================================== */
+
+
+        .intro {
+
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 80px auto;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .intro h2 {
+
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .intro p {
+
+
+            color: var(--gray);
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+
+        }
+
+
+
+        /* ==========================================
+   CONSULTATION FORM SECTION
+========================================== */
+
+
+        #consultation-form {
+
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 80px auto;
+
+            background: white;
+
+            padding: 50px;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+
+        }
+
+
+
+        #consultation-form h2 {
+
+
+            text-align: center;
+
+            font-size: 38px;
+
+            color: var(--primary);
+
+            margin-bottom: 40px;
+
+
+        }
+
+
+
+        .row {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .input-box {
+
+
+            display: flex;
+
+            flex-direction: column;
+
+
+        }
+
+
+
+        .input-box label {
+
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            color: var(--primary);
+
+
+        }
+
+
+
+        .input-box input,
+
+        .input-box select,
+
+        .input-box textarea {
+
+
+            padding: 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 6px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .input-box input:focus,
+
+        .input-box select:focus,
+
+        .input-box textarea:focus {
+
+
+            border-color: var(--gold);
+
+            box-shadow: 0 0 8px rgba(201, 162, 39, .3);
+
+
+        }
+
+
+
+        .full {
+
+
+            grid-column: 1/-1;
+
+
+        }
+
+
+
+        .input-box textarea {
+
+
+            resize: none;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+
+        @media(max-width:900px) {
+
+
+            header {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 40px;
+
+            }
+
+
+
+            .row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            #consultation-form {
+
+                padding: 30px;
+
+            }
+
+
+        }
+
+
+
+        @media(max-width:600px) {
+
+
+            .logo h2 {
+
+                font-size: 22px;
+
+            }
+
+
+            .consultation-hero {
+
+                height: 60vh;
+
+            }
+
+
+            .overlay h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .overlay p {
+
+                font-size: 15px;
+
+            }
+
+
+            .intro h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            #consultation-form h2 {
+
+                font-size: 28px;
+
+            }
+
+
+        }
+
+        /* ==========================================
+   CONSULTATION PACKAGES
+========================================== */
+
+
+        .packages {
+
+            padding: 80px 5%;
+
+            background: #f8f8f8;
+
+        }
+
+
+
+        .packages h2 {
+
+            text-align: center;
+
+            font-size: 38px;
+
+            color: var(--primary);
+
+            margin-bottom: 50px;
+
+        }
+
+
+
+        .package-container {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+
+        .package {
+
+
+            background: white;
+
+            padding: 40px 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow: var(--shadow);
+
+            position: relative;
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .package:hover {
+
+
+            transform: translateY(-12px);
+
+
+        }
+
+
+
+        .package h3 {
+
+
+            font-size: 25px;
+
+            color: var(--primary);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .package h1 {
+
+
+            font-size: 45px;
+
+            color: var(--gold);
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .package ul li {
+
+
+            padding: 10px;
+
+            color: var(--gray);
+
+            border-bottom: 1px solid #eee;
+
+
+        }
+
+
+
+        .package ul li:last-child {
+
+            border: none;
+
+        }
+
+
+
+        .popular {
+
+
+            border: 3px solid var(--gold);
+
+            transform: scale(1.05);
+
+
+        }
+
+
+
+        .popular span {
+
+
+            position: absolute;
+
+            top: -18px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   TERMS SECTION
+========================================== */
+
+
+        .terms {
+
+
+            margin: 30px 0;
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .terms label {
+
+
+            color: var(--gray);
+
+            font-size: 14px;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+
+        .submit-btn {
+
+
+            text-align: center;
+
+            margin-top: 35px;
+
+
+        }
+
+
+
+        .submit-btn button {
+
+
+            background: var(--gold);
+
+            color: white;
+
+            border: none;
+
+            padding: 16px 45px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .submit-btn button:hover {
+
+
+            background: var(--primary);
+
+            transform: translateY(-5px);
+
+
+        }
+
+
+
+        .submit-btn i {
+
+            margin-right: 10px;
+
+        }
+
+
+
+        /* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+
+        .why {
+
+
+            padding: 90px 8%;
+
+            background: white;
+
+
+        }
+
+
+
+        .why h2 {
+
+
+            text-align: center;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .why-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .why-box {
+
+
+            background: #f8f8f8;
+
+            padding: 40px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            transition: .4s;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+        .why-box:hover {
+
+
+            transform: translateY(-10px);
+
+            background: white;
+
+            box-shadow: var(--shadow);
+
+
+        }
+
+
+
+        .why-box i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .why-box h3 {
+
+
+            color: var(--primary);
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .why-box p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+        /* ==========================================
+   CONSULTATION PROCESS
+========================================== */
+
+
+        .process {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .process h2 {
+
+
+            text-align: center;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .process-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .step {
+
+
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .step:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .step h1 {
+
+
+            font-size: 55px;
+
+            color: var(--gold);
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .step h3 {
+
+
+            color: var(--primary);
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .step p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+        /* ==========================================
+   PACKAGE RESPONSIVE
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            .popular {
+
+                transform: none;
+
+            }
+
+
+
+            .packages h2,
+
+            .why h2,
+
+            .process h2 {
+
+                font-size: 30px;
+
+            }
+
+
+
+            .package h1 {
+
+                font-size: 38px;
+
+            }
+
+
+        }
+
+        /* ==========================================
+   LAWYER TEAM SECTION
+========================================== */
+
+
+        .lawyers {
+
+            padding: 90px 8%;
+
+            background: white;
+
+        }
+
+
+
+        .lawyers h2 {
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .section-text {
+
+            text-align: center;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            color: var(--gray);
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .lawyer-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 35px;
+
+
+        }
+
+
+
+        .lawyer-card {
+
+
+            background: #fff;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .lawyer-card:hover {
+
+
+            transform: translateY(-12px);
+
+
+        }
+
+
+
+        .lawyer-card img {
+
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+
+        }
+
+
+
+        .lawyer-card h3 {
+
+
+            color: var(--primary);
+
+            font-size: 24px;
+
+            margin-top: 20px;
+
+
+        }
+
+
+
+        .lawyer-card h4 {
+
+
+            color: var(--gold);
+
+            margin: 10px 0;
+
+
+        }
+
+
+
+        .lawyer-card p {
+
+
+            padding: 0 25px;
+
+            color: var(--gray);
+
+
+        }
+
+
+
+        .social {
+
+
+            margin: 20px;
+
+
+        }
+
+
+
+        .social a {
+
+
+            width: 40px;
+
+            height: 40px;
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: var(--primary);
+
+            color: white;
+
+            border-radius: 50%;
+
+            margin: 5px;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .social a:hover {
+
+
+            background: var(--gold);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   PRACTICE AREA SECTION
+========================================== */
+
+
+        .practice-area {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .practice-area h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .practice-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .practice-card {
+
+
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .practice-card:hover {
+
+
+            transform: translateY(-10px);
+
+            background: var(--primary);
+
+            color: white;
+
+
+        }
+
+
+
+        .practice-card i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .practice-card h3 {
+
+
+            color: var(--primary);
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .practice-card:hover h3 {
+
+            color: white;
+
+        }
+
+
+
+        .practice-card p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+        .practice-card:hover p {
+
+
+            color: #ddd;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   CLIENT REVIEWS
+========================================== */
+
+
+        .client-review {
+
+
+            padding: 90px 8%;
+
+            background: white;
+
+
+        }
+
+
+
+        .client-review h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .review-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .review-card {
+
+
+            background: #f8f8f8;
+
+            padding: 35px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .review-card:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .stars {
+
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .review-card p {
+
+
+            color: var(--gray);
+
+            font-style: italic;
+
+
+        }
+
+
+
+        .review-card h3 {
+
+
+            margin-top: 20px;
+
+            color: var(--primary);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   FAQ SECTION
+========================================== */
+
+
+        .faq {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .faq h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+        .faq-container {
+
+
+            max-width: 900px;
+
+            margin: auto;
+
+
+        }
+
+
+
+        .faq-box {
+
+
+            background: white;
+
+            margin-bottom: 20px;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .faq-box:hover {
+
+
+            border-left: 5px solid var(--gold);
+
+
+        }
+
+
+
+        .faq-box h3 {
+
+
+            color: var(--primary);
+
+            margin-bottom: 10px;
+
+            font-size: 20px;
+
+
+        }
+
+
+
+        .faq-box p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            .lawyers h2,
+            .practice-area h2,
+            .client-review h2,
+            .faq h2 {
+
+                font-size: 30px;
+
+            }
+
+
+
+            .lawyer-card img {
+
+                height: 240px;
+
+            }
+
+
+        }
+
+        /* ==========================================
+   OFFICE INFORMATION
+========================================== */
+
+
+        .office-info {
+
+            padding: 90px 8%;
+
+            background: white;
+
+        }
+
+
+
+        .office-info h2 {
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .office-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .office-card {
+
+
+            background: #f8f8f8;
+
+            padding: 40px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .office-card:hover {
+
+
+            transform: translateY(-10px);
+
+            background: white;
+
+            box-shadow: var(--shadow);
+
+
+        }
+
+
+
+        .office-card i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .office-card h3 {
+
+
+            color: var(--primary);
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .office-card p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   EMERGENCY SECTION
+========================================== */
+
+
+        .emergency {
+
+
+            background:
+
+                linear-gradient(rgba(11, 31, 58, .95),
+
+                    rgba(11, 31, 58, .95)),
+
+                url("emergency.jpg");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            padding: 90px 8%;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .emergency-content i {
+
+
+            font-size: 60px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .emergency h2 {
+
+
+            color: white;
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .emergency p {
+
+
+            max-width: 800px;
+
+            margin: auto;
+
+            color: #ddd;
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+        .emergency a {
+
+
+            display: inline-block;
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 15px 40px;
+
+            border-radius: 5px;
+
+            font-weight: 600;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .emergency a:hover {
+
+
+            background: white;
+
+            color: var(--primary);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   MAP SECTION
+========================================== */
+
+
+        .map-section {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .map-section h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+        .map {
+
+
+            width: 100%;
+
+            height: 450px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+
+        }
+
+
+
+        .map iframe {
+
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   NEWSLETTER
+========================================== */
+
+
+        .newsletter {
+
+
+            background: var(--primary);
+
+            padding: 80px 8%;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .newsletter h2 {
+
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .newsletter p {
+
+
+            color: #ddd;
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+        .newsletter form {
+
+
+            display: flex;
+
+            justify-content: center;
+
+            max-width: 650px;
+
+            margin: auto;
+
+
+        }
+
+        .top-message {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 90%;
+
+            max-width: 600px;
+
+            background: #0B1F3A;
+
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            z-index: 9999;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+
+            animation: slideDown .5s ease;
+
+        }
+
+
+        .top-message h3 {
+
+            color: #C9A227;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .top-message p {
+
+            margin: 0;
+
+        }
+
+
+        @keyframes slideDown {
+
+            from {
+
+                opacity: 0;
+
+                transform: translate(-50%, -50px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translate(-50%, 0);
+
+            }
+
+        }
+
+
+
+        .newsletter input {
+
+
+            width: 70%;
+
+            padding: 15px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 5px 0 0 5px;
+
+
+        }
+
+
+
+        .newsletter button {
+
+
+            width: 30%;
+
+            border: none;
+
+            background: var(--gold);
+
+            color: white;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            border-radius: 0 5px 5px 0;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   FOOTER
+========================================== */
+
+
+        footer {
+
+
+            background: #07111f;
+
+            color: white;
+
+            padding: 70px 8% 20px;
+
+
+        }
+
+
+
+        .footer-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 40px;
+
+
+        }
+
+
+
+        .footer-box h3 {
+
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+            font-size: 23px;
+
+
+        }
+
+
+
+        .footer-box p,
+
+
+        .footer-box li {
+
+
+            color: #bbb;
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+        .footer-box ul li a {
+
+
+            color: #bbb;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .footer-box ul li a:hover {
+
+
+            color: var(--gold);
+
+
+        }
+
+
+
+        .footer-social a {
+
+
+            width: 40px;
+
+            height: 40px;
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: white;
+
+            color: var(--primary);
+
+            border-radius: 50%;
+
+            margin-right: 8px;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .footer-social a:hover {
+
+
+            background: var(--gold);
+
+            color: white;
+
+
+        }
+
+
+
+        .copyright {
+
+
+            border-top: 1px solid rgba(255, 255, 255, .2);
+
+            margin-top: 40px;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+
+        }
+
+
+
+        /* ==========================================
+   ANIMATIONS
+========================================== */
+
+
+        @keyframes fadeUp {
+
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(40px);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+
+        }
+
+
+
+        .office-card,
+        .lawyer-card,
+        .practice-card,
+        .review-card,
+        .faq-box,
+        .package,
+        .step {
+
+
+            animation: fadeUp .8s ease;
+
+
+        }
+
+
+
+        /* ==========================================
+   FINAL RESPONSIVE DESIGN
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            .office-info h2,
+            .map-section h2,
+            .newsletter h2,
+            .emergency h2 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+            .map {
+
+                height: 300px;
+
+            }
+
+
+
+            .newsletter form {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+            .newsletter input,
+            .newsletter button {
+
+
+                width: 100%;
+
+                border-radius: 5px;
+
+                margin: 5px 0;
+
+
+            }
+
+
+
+            .footer-container {
+
+
+                text-align: center;
+
+
+            }
+
+
+
+            .emergency p {
+
+                font-size: 15px;
+
+            }
+
+
+
+        }
+
+
+
+        @media(max-width:480px) {
+
+
+            .office-card {
+
+                padding: 25px 15px;
+
+            }
+
+
+
+            .emergency {
+
+                padding: 60px 5%;
+
+            }
+
+
+
+            .newsletter {
+
+                padding: 60px 5%;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <h2>⚖ Justice & Associates</h2>
+        </div>
+
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="consultation-hero">
+
+        <div class="overlay">
+
+            <h1>Book Your Legal Consultation</h1>
+
+            <p>
+
+                Every legal issue deserves expert attention.
+                Schedule a confidential consultation with our
+                experienced advocates and receive professional
+                legal guidance tailored to your case.
+
+            </p>
+
+            <a href="#consultation-form" class="hero-btn">
+                Book Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="intro">
+
+        <h2>Need Legal Assistance?</h2>
+
+        <p>
+
+            Whether you're facing a criminal case,
+            property dispute, family matter,
+            corporate litigation, cybercrime issue,
+            or business conflict, our experienced
+            legal professionals are here to protect
+            your rights and guide you through every
+            stage of the legal process.
+
+        </p>
+
+    </section>
+
+    <!-- ================= CONSULTATION FORM ================= -->
+
+    <section id="consultation-form">
+
+        <h2>Consultation Request Form</h2>
+
+        <form>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Full Name</label>
+
+                    <input type="text" placeholder="Enter your full name" required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Email Address</label>
+
+                    <input type="email" placeholder="example@gmail.com" required>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Phone Number</label>
+
+                    <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Alternative Contact</label>
+
+                    <input type="tel" placeholder="Optional">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Date of Birth</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Gender</label>
+
+                    <select>
+
+                        <option>Select</option>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Street Address</label>
+
+                    <input type="text" placeholder="House No., Street">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>City</label>
+
+                    <input type="text" placeholder="City">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>State</label>
+
+                    <input type="text" placeholder="State">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Pin Code</label>
+
+                    <input type="number" placeholder="Pin Code">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Practice Area</label>
+
+                    <select>
+
+                        <option>Select Practice Area</option>
+
+                        <option>Criminal Law</option>
+
+                        <option>Civil Law</option>
+
+                        <option>Corporate Law</option>
+
+                        <option>Cyber Law</option>
+
+                        <option>Property Law</option>
+
+                        <option>Tax Law</option>
+
+                        <option>Family Law</option>
+
+                        <option>Constitutional Law</option>
+
+                        <option>Labour Law</option>
+
+                        <option>Consumer Law</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Select Lawyer</label>
+
+                    <select>
+
+                        <option>Choose Advocate</option>
+
+                        <option>Adv. Rajesh Sharma</option>
+
+                        <option>Adv. Priya Kapoor</option>
+
+                        <option>Adv. Arjun Verma</option>
+
+                        <option>Adv. Neha Singh</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Consultation Type</label>
+
+                    <select>
+
+                        <option>Office Visit</option>
+
+                        <option>Video Consultation</option>
+
+                        <option>Phone Consultation</option>
+
+                        <option>Home Visit</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Case Priority</label>
+
+                    <select>
+
+                        <option>Normal</option>
+
+                        <option>Urgent</option>
+
+                        <option>Very Urgent</option>
+
+                        <option>Emergency</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Preferred Date</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Preferred Time</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+            <!-- ================= CASE DETAILS ================= -->
+
+            <div class="row">
+
+                <div class="input-box full">
+
+                    <label>Case Title</label>
+
+                    <input type="text" placeholder="Enter Case Title">
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-box full">
+
+                    <label>Case Description</label>
+
+                    <textarea rows="8" placeholder="Describe your legal issue in detail..."></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Upload Legal Documents</label>
+
+                    <input type="file">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Number of Documents</label>
+
+                    <input type="number" placeholder="0">
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Estimated Budget</label>
+
+                    <select>
+
+                        <option>Select Budget</option>
+
+                        <option>₹5,000 - ₹10,000</option>
+
+                        <option>₹10,000 - ₹25,000</option>
+
+                        <option>₹25,000 - ₹50,000</option>
+
+                        <option>₹50,000+</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>How did you hear about us?</label>
+
+                    <select>
+
+                        <option>Google</option>
+
+                        <option>Facebook</option>
+
+                        <option>Instagram</option>
+
+                        <option>Friend Referral</option>
+
+                        <option>Newspaper</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CONSULTATION PACKAGE ================= -->
+
+            <section class="packages">
+
+                <h2>Select Consultation Package</h2>
+
+                <div class="package-container">
+
+                    <div class="package">
+
+                        <h3>Basic Consultation</h3>
+
+                        <h1>₹999</h1>
+
+                        <ul>
+
+                            <li>30 Minutes Meeting</li>
+
+                            <li>Case Review</li>
+
+                            <li>Basic Legal Advice</li>
+
+                            <li>Email Support</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="package popular">
+
+                        <span>Most Popular</span>
+
+                        <h3>Premium Consultation</h3>
+
+                        <h1>₹2,499</h1>
+
+                        <ul>
+
+                            <li>60 Minutes Meeting</li>
+
+                            <li>Document Review</li>
+
+                            <li>Legal Strategy</li>
+
+                            <li>Priority Support</li>
+
+                            <li>Follow-up Session</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="package">
+
+                        <h3>Corporate Package</h3>
+
+                        <h1>₹9,999</h1>
+
+                        <ul>
+
+                            <li>Business Consultation</li>
+
+                            <li>Contract Review</li>
+
+                            <li>Legal Documentation</li>
+
+                            <li>Corporate Advisory</li>
+
+                            <li>Unlimited Calls</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TERMS ================= -->
+
+            <div class="terms">
+
+                <input type="checkbox" required>
+
+                <label>
+
+                    I certify that all information provided is
+                    true to the best of my knowledge. I agree
+                    to the firm's Privacy Policy and Terms &
+                    Conditions.
+
+                </label>
+
+            </div>
+
+
+            <div class="submit-btn">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Book Consultation
+
+                </button>
+
+            </div>
+
+
+
+        </form>
+
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why">
+
+        <h2>Why Choose Our Law Firm?</h2>
+
+        <div class="why-container">
+
+            <div class="why-box">
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                <h3>20+ Years Experience</h3>
+
+                <p>
+
+                    Experienced advocates handling
+                    thousands of successful cases.
+
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <h3>Confidential Consultation</h3>
+
+                <p>
+
+                    Your legal matters remain
+                    100% private and secure.
+
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <i class="fa-solid fa-gavel"></i>
+
+                <h3>Expert Lawyers</h3>
+
+                <p>
+
+                    Highly qualified specialists in
+                    multiple areas of law.
+
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>24×7 Legal Support</h3>
+
+                <p>
+
+                    Emergency legal assistance
+                    whenever you need it.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONSULTATION PROCESS ================= -->
+
+    <section class="process">
+
+        <h2>Our Consultation Process</h2>
+
+        <div class="process-container">
+
+            <div class="step">
+
+                <h1>01</h1>
+
+                <h3>Submit Request</h3>
+
+                <p>
+
+                    Fill out the consultation
+                    request form.
+
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h1>02</h1>
+
+                <h3>Case Review</h3>
+
+                <p>
+
+                    Our lawyers review your
+                    case carefully.
+
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h1>03</h1>
+
+                <h3>Schedule Meeting</h3>
+
+                <p>
+
+                    Choose your preferred
+                    date and time.
+
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h1>04</h1>
+
+                <h3>Legal Guidance</h3>
+
+                <p>
+
+                    Receive professional
+                    legal advice and strategy.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= OUR LAWYERS ================= -->
+
+    <section class="lawyers">
+
+        <h2>Meet Our Expert Lawyers</h2>
+
+        <p class="section-text">
+
+            Our team consists of experienced advocates
+            specialized in different fields of law.
+            Every case is handled with dedication,
+            strategy and professional expertise.
+
+        </p>
+
+
+        <div class="lawyer-container">
+
+
+            <div class="lawyer-card">
+
+                <img src="lawyer1.jpg" alt="Advocate">
+
+                <h3>Adv. Rajesh Sharma</h3>
+
+                <h4>Senior Advocate</h4>
+
+                <p>
+
+                    Specialist in Criminal Law and
+                    Constitutional Matters with 20+
+                    years of courtroom experience.
+
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="lawyer-card">
+
+                <img src="lawyer2.jpg" alt="Advocate">
+
+                <h3>Adv. Priya Kapoor</h3>
+
+                <h4>Corporate Lawyer</h4>
+
+                <p>
+
+                    Expert in Business Law,
+                    Contracts, Corporate Compliance
+                    and Legal Documentation.
+
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="lawyer-card">
+
+                <img src="lawyer3.jpg" alt="Advocate">
+
+                <h3>Adv. Arjun Verma</h3>
+
+                <h4>Civil Law Expert</h4>
+
+                <p>
+
+                    Experienced in Property Disputes,
+                    Family Matters and Civil Litigation.
+
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ================= PRACTICE AREAS ================= -->
+
+
+    <section class="practice-area">
+
+        <h2>Our Legal Practice Areas</h2>
+
+
+        <div class="practice-container">
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-gavel"></i>
+
+                <h3>Criminal Law</h3>
+
+                <p>
+
+                    Strong representation in criminal
+                    cases, bail matters and trials.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-building"></i>
+
+                <h3>Corporate Law</h3>
+
+                <p>
+
+                    Business advisory, contracts,
+                    mergers and legal compliance.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-house"></i>
+
+                <h3>Property Law</h3>
+
+                <p>
+
+                    Solutions for property disputes,
+                    registration and ownership issues.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-users"></i>
+
+                <h3>Family Law</h3>
+
+                <p>
+
+                    Divorce, custody, maintenance
+                    and family dispute resolution.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <h3>Cyber Law</h3>
+
+                <p>
+
+                    Legal assistance for cybercrime,
+                    online fraud and digital disputes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <i class="fas fa-file-contract"></i>
+
+                <h3>Contract Law</h3>
+
+                <p>
+
+                    Drafting, reviewing and
+                    negotiating legal agreements.
+
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+
+    <section class="client-review">
+
+
+        <h2>What Our Clients Say</h2>
+
+
+        <div class="review-container">
+
+
+
+            <div class="review-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+
+                <p>
+
+                    "The legal team provided excellent
+                    guidance and handled my case with
+                    complete professionalism."
+
+                </p>
+
+
+                <h3>
+                    - Amit Kumar
+                </h3>
+
+
+            </div>
+
+
+
+
+            <div class="review-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+
+                <p>
+
+                    "Very knowledgeable advocates.
+                    They explained every legal step
+                    clearly and helped me achieve
+                    the best result."
+
+                </p>
+
+
+                <h3>
+                    - Sneha Verma
+                </h3>
+
+
+            </div>
+
+
+
+
+
+            <div class="review-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+
+                <p>
+
+                    "Highly recommended for anyone
+                    looking for trustworthy legal
+                    consultation and support."
+
+                </p>
+
+
+                <h3>
+                    - Rahul Singh
+                </h3>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================= FAQ ================= -->
+
+
+    <section class="faq">
+
+
+        <h2>Frequently Asked Questions</h2>
+
+
+
+        <div class="faq-container">
+
+
+
+            <div class="faq-box">
+
+
+                <h3>
+                    How can I book a consultation?
+                </h3>
+
+
+                <p>
+
+                    You can fill the consultation form,
+                    select your preferred date and our
+                    team will contact you shortly.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="faq-box">
+
+
+                <h3>
+                    Is my case information confidential?
+                </h3>
+
+
+                <p>
+
+                    Yes. All client information and
+                    documents are handled with complete
+                    confidentiality and security.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="faq-box">
+
+
+                <h3>
+                    Can I take online consultation?
+                </h3>
+
+
+                <p>
+
+                    Yes. We provide video and phone
+                    consultation facilities for clients
+                    who cannot visit our office.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="faq-box">
+
+
+                <h3>
+                    What documents are required?
+                </h3>
+
+
+                <p>
+
+                    Required documents depend on your
+                    case type. Our legal team will guide
+                    you after reviewing your request.
+
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+    <!-- ================= OFFICE INFORMATION ================= -->
+
+    <section class="office-info">
+
+        <h2>Visit Our Law Office</h2>
+
+
+        <div class="office-container">
+
+
+            <div class="office-card">
+
+                <i class="fas fa-location-dot"></i>
+
+                <h3>Office Address</h3>
+
+                <p>
+
+                    Justice & Associates Law Firm<br>
+
+                    21 Legal Avenue,<br>
+
+                    Connaught Place,<br>
+
+                    New Delhi, India
+
+                </p>
+
+            </div>
+
+
+
+            <div class="office-card">
+
+                <i class="fas fa-phone"></i>
+
+                <h3>Contact Information</h3>
+
+                <p>
+
+                    Phone:
+                    +91 98765 43210
+
+                    <br><br>
+
+                    Email:
+                    info@justiceassociates.com
+
+                </p>
+
+            </div>
+
+
+
+            <div class="office-card">
+
+                <i class="fas fa-clock"></i>
+
+                <h3>Office Hours</h3>
+
+                <p>
+
+                    Monday - Saturday
+
+                    <br>
+
+                    9:00 AM - 7:00 PM
+
+                    <br><br>
+
+                    Sunday: Emergency Only
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= EMERGENCY SECTION ================= -->
+
+
+    <section class="emergency">
+
+
+        <div class="emergency-content">
+
+
+            <i class="fas fa-phone-volume"></i>
+
+
+            <h2>
+                Need Immediate Legal Help?
+            </h2>
+
+
+            <p>
+
+                Facing an urgent legal situation?
+                Our emergency legal support team
+                is available to provide immediate
+                guidance and assistance.
+
+            </p>
+
+
+            <a href="tel:+919876543210">
+
+                Call Now
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================= MAP SECTION ================= -->
+
+
+    <section class="map-section">
+
+
+        <h2>Find Our Location</h2>
+
+
+        <div class="map">
+
+
+            <iframe src="https://www.google.com/maps?q=New%20Delhi&output=embed" loading="lazy">
+
+            </iframe>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+
+    <section class="newsletter">
+
+
+        <div class="newsletter-content">
+
+
+            <h2>
+                Stay Updated With Legal Insights
+            </h2>
+
+
+            <p>
+
+                Subscribe to receive legal updates,
+                law articles, important judgments and
+                professional legal advice.
+
+            </p>
+
+
+
+            <form>
+
+
+                <input type="email" placeholder="Enter your email address">
+
+
+                <button>
+
+                    Subscribe
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+
+            <div class="footer-box">
+
+
+                <h3>
+                    Justice & Associates
+                </h3>
+
+
+                <p>
+
+                    Providing professional legal services
+                    with integrity, dedication and
+                    commitment towards justice.
+
+                </p>
+
+
+                <div class="footer-social">
+
+
+                    <a href="#">
+
+                        <i class="fab fa-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="fab fa-twitter"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="footer-box">
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="footer-box">
+
+
+                <h3>
+                    Legal Services
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        Criminal Law
+                    </li>
+
+
+                    <li>
+                        Corporate Law
+                    </li>
+
+
+                    <li>
+                        Civil Litigation
+                    </li>
+
+
+                    <li>
+                        Family Law
+                    </li>
+
+
+                    <li>
+                        Cyber Law
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="footer-box">
+
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+
+                    <i class="fas fa-phone"></i>
+
+                    +91 98765 43210
+
+                </p>
+
+
+                <p>
+
+                    <i class="fas fa-envelope"></i>
+
+                    info@justiceassociates.com
+
+                </p>
+
+
+                <p>
+
+                    <i class="fas fa-location-dot"></i>
+
+                    New Delhi, India
+
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="copyright">
+
+
+            <p>
+
+                © 2026 Justice & Associates.
+                All Rights Reserved.
+
+            </p>
+
+
+        </div>
+
+
+    </footer>
+
+
+    <script>
+        let button = document.getElementById("submitBtn");
+
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+
+            // Create message box
+
+            let message = document.createElement("div");
+
+
+            message.innerHTML = `
+
+        <h3>✅ Consultation Submitted Successfully!</h3>
+
+        <p>
+        Your consultation request has been sent to the lawyer.
+        Our legal team will contact you soon.
+        </p>
+
+    `;
+
+
+            // Add class
+
+            message.classList.add("top-message");
+
+
+            // Add message on page
+
+            document.body.appendChild(message);
+
+
+
+            // Remove message after 5 seconds
+
+            setTimeout(function () {
+
+                message.remove();
+
+            }, 5000);
+
+
+        }); </script>
+</body>
+
+</html>

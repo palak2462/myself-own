@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | LawVerse</title>
+
+    <link rel="stylesheet" href="login.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+
+        }
+
+
+
+        body {
+
+            height: 100vh;
+
+            background:
+
+                linear-gradient(rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)),
+
+                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+
+
+        .login-container {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+
+        .login-box {
+
+
+            width: 420px;
+
+            background: white;
+
+            padding: 45px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+        .logo {
+
+
+            font-size: 35px;
+
+            font-weight: bold;
+
+            color: #d4af37;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .logo i {
+
+            margin-right: 10px;
+
+        }
+
+
+
+
+
+        .login-box h2 {
+
+            font-size: 30px;
+
+            color: #111827;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .login-box p {
+
+            color: #666;
+
+            margin-bottom: 30px;
+
+        }
+
+
+
+
+
+        .input-box {
+
+
+            display: flex;
+
+            align-items: center;
+
+            background: #f3f4f6;
+
+            margin-bottom: 20px;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+
+        }
+
+
+
+        .input-box i {
+
+            color: #d4af37;
+
+            font-size: 20px;
+
+            margin-right: 15px;
+
+        }
+
+
+
+
+        .input-box input {
+
+
+            border: none;
+
+            outline: none;
+
+            background: none;
+
+            font-size: 16px;
+
+            width: 100%;
+
+
+        }
+
+
+
+
+
+        .options {
+
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .options a {
+
+            color: #111827;
+
+            text-decoration: none;
+
+        }
+
+
+
+
+
+        button {
+
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            background: #111827;
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+
+        }
+
+
+
+        button:hover {
+
+
+            background: #d4af37;
+
+            color: black;
+
+
+        }
+
+
+
+
+
+
+
+        .access {
+
+
+            margin-top: 30px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #ddd;
+
+
+        }
+
+
+
+        .access p {
+
+            font-weight: bold;
+
+            color: #111827;
+
+            margin-bottom: 5px;
+
+        }
+
+
+
+        .access span {
+
+            font-size: 14px;
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+        @media(max-width:500px) {
+
+
+            .login-box {
+
+                width: 90%;
+
+                padding: 30px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <div class="login-container">
+
+
+
+        <div class="login-box">
+
+
+
+            <div class="logo">
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                LawVerse
+
+            </div>
+
+
+
+            <h2>
+                Secure Access Portal
+            </h2>
+
+
+            <p>
+                Login to access private legal documents and resources.
+            </p>
+
+
+
+
+
+            <form>
+
+
+
+                <div class="input-box">
+
+
+                    <i class="fa-solid fa-user"></i>
+
+
+                    <input type="text" placeholder="Username">
+
+
+                </div>
+
+
+
+
+
+                <div class="input-box">
+
+
+                    <i class="fa-solid fa-lock"></i>
+
+
+                    <input type="password" placeholder="Password">
+
+
+                </div>
+
+
+
+
+
+                <div class="options">
+
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+
+                </div>
+
+
+
+
+
+                <button>
+
+                    Login
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                </button>
+
+
+
+
+            </form>
+
+
+
+
+
+            <div class="access">
+
+                <p>
+
+                    Authorized Users Only
+
+                </p>
+
+                <span>
+                    Lawyers | Researchers | Legal Associates
+                </span>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

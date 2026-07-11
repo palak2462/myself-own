@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Advocate Portfolio</title>
+
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ===================================
+   GOOGLE FONT
+=================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+        /* ===================================
+   RESET
+=================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        /* ===================================
+   VARIABLES
+=================================== */
+
+        :root {
+
+            --primary: #0B1F3A;
+            --secondary: #C9A227;
+            --white: #ffffff;
+            --black: #111111;
+            --gray: #666;
+            --light: #f8f8f8;
+
+            --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+        }
+
+
+        /* ===================================
+   HERO SECTION
+=================================== */
+
+        .about-hero {
+
+            height: 70vh;
+
+            background:
+                linear-gradient(rgba(10, 20, 40, .75),
+                    rgba(10, 20, 40, .75)),
+                url("law-bg.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: white;
+
+        }
+
+        .overlay {
+
+            width: 80%;
+            max-width: 900px;
+
+        }
+
+        .overlay h1 {
+
+            font-size: 60px;
+
+            margin-bottom: 20px;
+
+            color: var(--secondary);
+
+            letter-spacing: 2px;
+
+        }
+
+        .overlay p {
+
+            font-size: 20px;
+
+            color: #ddd;
+
+        }
+
+
+        /* ===================================
+   ABOUT SECTION
+=================================== */
+
+        .about {
+
+            width: 90%;
+            max-width: 1300px;
+
+            margin: 80px auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+        .about .image {
+
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+        }
+
+        .about .image img {
+
+            transition: .5s;
+
+        }
+
+        .about .image:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+        .content h2 {
+
+            font-size: 42px;
+
+            color: var(--primary);
+
+            margin-bottom: 25px;
+
+            position: relative;
+
+        }
+
+        .content h2::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 90px;
+
+            height: 4px;
+
+            background: var(--secondary);
+
+            left: 0;
+
+            bottom: -10px;
+
+        }
+
+        .content p {
+
+            margin: 20px 0;
+
+            color: var(--gray);
+
+            text-align: justify;
+
+            font-size: 17px;
+
+        }
+
+
+        /* ===================================
+   BUTTON
+=================================== */
+
+        .btn {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 14px 35px;
+
+            background: var(--secondary);
+
+            color: white;
+
+            border-radius: 5px;
+
+            transition: .4s;
+
+            font-weight: 600;
+
+        }
+
+        .btn:hover {
+
+            background: var(--primary);
+
+            transform: translateY(-5px);
+
+        }
+
+
+        /* ===================================
+   SECTION HEADING
+=================================== */
+
+        section h2 {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            position: relative;
+
+        }
+
+        section h2::after {
+
+            content: "";
+
+            width: 90px;
+
+            height: 4px;
+
+            background: var(--secondary);
+
+            position: absolute;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            bottom: -15px;
+
+        }
+
+
+        /* ===================================
+   COMMON CONTAINER
+=================================== */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+
+        /* ===================================
+   SIMPLE ANIMATION
+=================================== */
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(40px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        .about,
+        .overlay {
+
+            animation: fadeUp 1.2s ease;
+
+        }
+
+
+        /* ===================================
+   RESPONSIVE
+=================================== */
+
+        @media(max-width:991px) {
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .overlay h1 {
+
+                font-size: 45px;
+
+            }
+
+            .overlay p {
+
+                font-size: 18px;
+
+            }
+
+            .content h2 {
+
+                font-size: 35px;
+
+            }
+
+        }
+
+
+        @media(max-width:768px) {
+
+            .about-hero {
+
+                height: 55vh;
+
+            }
+
+            .overlay h1 {
+
+                font-size: 34px;
+
+            }
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+            .content h2 {
+
+                font-size: 30px;
+
+            }
+
+            .btn {
+
+                padding: 12px 25px;
+
+            }
+
+        }
+
+        /* ==========================================
+   BIOGRAPHY SECTION
+========================================== */
+
+        .biography {
+            background: #ffffff;
+            padding: 90px 8%;
+        }
+
+        .bio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .bio-box {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .4s;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .bio-box:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+        }
+
+        .bio-box i {
+            font-size: 55px;
+            color: var(--secondary);
+            margin-bottom: 25px;
+        }
+
+        .bio-box h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .bio-box p {
+            color: var(--gray);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+
+        /* ==========================================
+   MISSION & VISION
+========================================== */
+
+        .mission {
+            padding: 90px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            background: #f8f8f8;
+        }
+
+        .card {
+            background: #fff;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+            transition: .4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--secondary);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .card p {
+            color: var(--gray);
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+
+        /* ==========================================
+   CAREER TIMELINE
+========================================== */
+
+        .timeline {
+            background: #fff;
+            padding: 100px 8%;
+        }
+
+        .timeline-box {
+            position: relative;
+            max-width: 900px;
+            margin: 60px auto;
+        }
+
+        .timeline-box::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--secondary);
+            transform: translateX(-50%);
+        }
+
+        .event {
+            position: relative;
+            width: 45%;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 45px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .4s;
+        }
+
+        .event:hover {
+            transform: scale(1.03);
+        }
+
+        .event:nth-child(odd) {
+            left: 0;
+        }
+
+        .event:nth-child(even) {
+            left: 55%;
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            top: 35px;
+        }
+
+        .event:nth-child(odd)::before {
+            right: -52px;
+        }
+
+        .event:nth-child(even)::before {
+            left: -52px;
+        }
+
+        .event span {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .event h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .event p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+   TIMELINE RESPONSIVE
+========================================== */
+
+        @media(max-width:900px) {
+
+            .timeline-box::before {
+                left: 20px;
+            }
+
+            .event {
+                width: 90%;
+                left: 40px !important;
+            }
+
+            .event::before {
+                left: -31px !important;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            .biography {
+                padding: 70px 5%;
+            }
+
+            .mission {
+                padding: 70px 5%;
+            }
+
+            .timeline {
+                padding: 70px 5%;
+            }
+
+            .card {
+                padding: 30px;
+            }
+
+            .bio-box {
+                padding: 30px 20px;
+            }
+
+            .bio-box h3 {
+                font-size: 22px;
+            }
+
+            .card h2 {
+                font-size: 28px;
+            }
+
+            .event {
+                padding: 20px;
+            }
+
+            .event h3 {
+                font-size: 22px;
+            }
+
+        }
+
+        /* ==========================================
+   CORE VALUES SECTION
+========================================== */
+
+        .values {
+            background: #f5f5f5;
+            padding: 90px 8%;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .value {
+            background: #fff;
+            padding: 40px 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .4s;
+            border-bottom: 5px solid transparent;
+        }
+
+        .value:hover {
+            transform: translateY(-10px);
+            border-bottom: 5px solid var(--secondary);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+        }
+
+        .value i {
+            font-size: 55px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .value h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .value p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+   ACHIEVEMENTS SECTION
+========================================== */
+
+        .achievements {
+            background: #fff;
+            padding: 90px 8%;
+        }
+
+        .achievements ul {
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+
+        .achievements ul li {
+            background: #f8f8f8;
+            margin-bottom: 20px;
+            padding: 20px 25px;
+            border-left: 6px solid var(--secondary);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            transition: .3s;
+            font-size: 17px;
+        }
+
+        .achievements ul li:hover {
+            transform: translateX(10px);
+            background: #fff;
+        }
+
+
+        /* ==========================================
+   CERTIFICATIONS
+========================================== */
+
+        .certifications {
+            background: #f5f5f5;
+            padding: 90px 8%;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .cert {
+            background: #fff;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 12px;
+            transition: .4s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .cert:hover {
+            transform: translateY(-10px);
+        }
+
+        .cert i {
+            font-size: 50px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .cert p {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+
+        /* ==========================================
+   PRACTICE AREAS
+========================================== */
+
+        .practice {
+            background: #ffffff;
+            padding: 90px 8%;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .practice-grid div {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 28px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: .4s;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+        }
+
+        .practice-grid div:hover {
+            background: var(--secondary);
+            transform: translateY(-8px);
+        }
+
+
+        /* ==========================================
+   RESPONSIVE
+========================================== */
+
+        @media(max-width:768px) {
+
+            .values,
+            .achievements,
+            .certifications,
+            .practice {
+                padding: 70px 5%;
+            }
+
+            .value,
+            .cert {
+                padding: 30px 20px;
+            }
+
+            .value h3 {
+                font-size: 22px;
+            }
+
+            .practice-grid div {
+                font-size: 18px;
+                padding: 22px;
+            }
+
+            .achievements ul li {
+                font-size: 16px;
+                padding: 18px;
+            }
+
+        }
+
+        /* ==========================================
+   STATISTICS SECTION
+========================================== */
+
+        .stats {
+            background: linear-gradient(rgba(11, 31, 58, .95), rgba(11, 31, 58, .95)),
+                url("stats-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 90px 8%;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+
+            text-align: center;
+        }
+
+        .stats div {
+            background: rgba(255, 255, 255, .08);
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: .4s;
+        }
+
+        .stats div:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .stats h1 {
+            color: var(--secondary);
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .stats p {
+            color: #fff;
+            font-size: 18px;
+        }
+
+
+        /* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+        .choose {
+            background: #f5f5f5;
+            padding: 90px 8%;
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .choose-grid div {
+            background: #fff;
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .4s;
+        }
+
+        .choose-grid div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+        }
+
+        .choose-grid i {
+            font-size: 55px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .choose-grid h3 {
+            color: var(--primary);
+            font-size: 22px;
+        }
+
+
+        /* ==========================================
+   TESTIMONIALS
+========================================== */
+
+        .testimonial {
+            background: #ffffff;
+            padding: 90px 8%;
+        }
+
+        .review {
+            max-width: 850px;
+            margin: 35px auto;
+            background: #f9f9f9;
+            padding: 35px;
+            border-left: 6px solid var(--secondary);
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .4s;
+        }
+
+        .review:hover {
+            transform: translateX(10px);
+        }
+
+        .review p {
+            color: var(--gray);
+            line-height: 1.9;
+            font-style: italic;
+            font-size: 17px;
+        }
+
+        .review h4 {
+            margin-top: 20px;
+            color: var(--primary);
+        }
+
+
+        /* ==========================================
+   CALL TO ACTION
+========================================== */
+
+        .cta {
+            background: linear-gradient(rgba(11, 31, 58, .93), rgba(11, 31, 58, .93));
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #fff;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta h2::after {
+            background: var(--secondary);
+        }
+
+        .cta p {
+            color: #ddd;
+            max-width: 800px;
+            margin: 20px auto 40px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .cta .btn {
+            font-size: 18px;
+        }
+
+
+        /* ==========================================
+   FOOTER
+========================================== */
+
+        footer {
+            background: #081423;
+            color: #bbb;
+            text-align: center;
+            padding: 30px;
+            font-size: 16px;
+        }
+
+
+        /* ==========================================
+   EXTRA HOVER EFFECTS
+========================================== */
+
+        .bio-box,
+        .value,
+        .cert,
+        .practice-grid div,
+        .choose-grid div,
+        .card,
+        .review,
+        .stats div {
+            transition: all .4s ease;
+        }
+
+        .bio-box:hover,
+        .value:hover,
+        .cert:hover,
+        .practice-grid div:hover,
+        .choose-grid div:hover,
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+
+        /* ==========================================
+   SCROLL ANIMATION
+========================================== */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .about,
+        .biography,
+        .mission,
+        .timeline,
+        .values,
+        .achievements,
+        .certifications,
+        .practice,
+        .stats,
+        .choose,
+        .testimonial,
+        .cta {
+
+            animation: fadeIn 1s ease;
+
+        }
+
+
+        /* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+        @media(max-width:992px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .overlay h1 {
+                font-size: 46px;
+            }
+
+            .cta h2 {
+                font-size: 35px;
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .stats,
+            .choose-grid,
+            .value-grid,
+            .practice-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats h1 {
+                font-size: 45px;
+            }
+
+            .review {
+                padding: 25px;
+            }
+
+            .review p {
+                font-size: 16px;
+            }
+
+            .cta {
+                padding: 70px 5%;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+
+            .cta p {
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 15px;
+            }
+
+        }
+
+        @media(max-width:480px) {
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .overlay h1 {
+                font-size: 32px;
+            }
+
+            .overlay p {
+                font-size: 15px;
+            }
+
+            .stats h1 {
+                font-size: 38px;
+            }
+
+            .stats p {
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 15px;
+            }
+
+            .review {
+                padding: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="overlay">
+
+            <h1>About Our Law Firm</h1>
+
+            <p>
+                Justice. Integrity. Excellence.
+                Protecting your rights with dedication,
+                professionalism and legal expertise.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+
+        <div class="image">
+
+            <img src="https://blog.ipleaders.in/wp-content/uploads/2021/02/lawyer-keywords.jpg" alt="Lawyer">
+
+        </div>
+
+        <div class="content">
+
+            <h2>Who We Are</h2>
+
+            <p>
+
+                Established with the vision of delivering
+                exceptional legal services, our firm has been
+                helping individuals, businesses and organizations
+                navigate complex legal challenges with confidence.
+
+                We believe every client deserves honest advice,
+                transparent communication and strong legal
+                representation.
+
+            </p>
+
+            <p>
+
+                Our team specializes in Civil Law, Criminal Law,
+                Corporate Law, Family Law, Property Disputes,
+                Cyber Law, Constitutional Matters and Consumer
+                Protection.
+
+            </p>
+
+            <a href="#" class="btn">Read More</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BIOGRAPHY ================= -->
+
+    <section class="biography">
+
+        <h2>Professional Biography</h2>
+
+        <div class="bio-container">
+
+            <div class="bio-box">
+
+                <i class="fas fa-user-tie"></i>
+
+                <h3>Education</h3>
+
+                <p>
+
+                    LL.B., LL.M. with specialization in
+                    Corporate & Constitutional Law from
+                    a reputed National Law University.
+
+                </p>
+
+            </div>
+
+            <div class="bio-box">
+
+                <i class="fas fa-scale-balanced"></i>
+
+                <h3>Legal Experience</h3>
+
+                <p>
+
+                    Over 18+ years of courtroom experience,
+                    representing clients in District Courts,
+                    High Courts and the Supreme Court.
+
+                </p>
+
+            </div>
+
+            <div class="bio-box">
+
+                <i class="fas fa-award"></i>
+
+                <h3>Recognition</h3>
+
+                <p>
+
+                    Awarded multiple legal excellence awards
+                    for outstanding advocacy and public service.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MISSION ================= -->
+
+    <section class="mission">
+
+        <div class="card">
+
+            <h2>Our Mission</h2>
+
+            <p>
+
+                To provide affordable, ethical and
+                result-oriented legal services while
+                maintaining the highest standards of
+                professional conduct.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Our Vision</h2>
+
+            <p>
+
+                To become one of the nation's most trusted
+                legal advisors by delivering justice,
+                building confidence and protecting rights.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section class="timeline">
+
+        <h2>Career Timeline</h2>
+
+        <div class="timeline-box">
+
+            <div class="event">
+
+                <span>2008</span>
+
+                <h3>Started Legal Career</h3>
+
+                <p>Joined District Court as a practicing advocate.</p>
+
+            </div>
+
+            <div class="event">
+
+                <span>2012</span>
+
+                <h3>Corporate Litigation</h3>
+
+                <p>Handled major commercial and business disputes.</p>
+
+            </div>
+
+            <div class="event">
+
+                <span>2016</span>
+
+                <h3>High Court Practice</h3>
+
+                <p>Successfully represented clients in constitutional matters.</p>
+
+            </div>
+
+            <div class="event">
+
+                <span>2020</span>
+
+                <h3>Senior Legal Consultant</h3>
+
+                <p>Expanded practice across multiple states.</p>
+
+            </div>
+
+            <div class="event">
+
+                <span>2025</span>
+
+                <h3>National Recognition</h3>
+
+                <p>Recognized among leading legal professionals.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VALUES ================= -->
+
+    <section class="values">
+
+        <h2>Our Core Values</h2>
+
+        <div class="value-grid">
+
+            <div class="value">
+
+                <i class="fas fa-gavel"></i>
+
+                <h3>Justice</h3>
+
+                <p>We fight fearlessly for fairness and justice.</p>
+
+            </div>
+
+            <div class="value">
+
+                <i class="fas fa-handshake"></i>
+
+                <h3>Integrity</h3>
+
+                <p>Honesty and ethics guide every legal decision.</p>
+
+            </div>
+
+            <div class="value">
+
+                <i class="fas fa-user-shield"></i>
+
+                <h3>Confidentiality</h3>
+
+                <p>Your information remains completely secure.</p>
+
+            </div>
+
+            <div class="value">
+
+                <i class="fas fa-star"></i>
+
+                <h3>Excellence</h3>
+
+                <p>Delivering quality legal representation every time.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section class="achievements">
+
+        <h2>Professional Achievements</h2>
+
+        <ul>
+
+            <li>✔ Successfully handled 2500+ legal cases.</li>
+
+            <li>✔ 95% Client Satisfaction Rate.</li>
+
+            <li>✔ Legal Advisor to Corporate Companies.</li>
+
+            <li>✔ Published 50+ Legal Research Articles.</li>
+
+            <li>✔ Speaker at National Law Conferences.</li>
+
+            <li>✔ Member of Bar Council Association.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section class="certifications">
+
+        <h2>Certifications & Memberships</h2>
+
+        <div class="cert-grid">
+
+            <div class="cert">
+
+                <i class="fas fa-certificate"></i>
+
+                <p>Bar Council of India</p>
+
+            </div>
+
+            <div class="cert">
+
+                <i class="fas fa-certificate"></i>
+
+                <p>Supreme Court Bar Association</p>
+
+            </div>
+
+            <div class="cert">
+
+                <i class="fas fa-certificate"></i>
+
+                <p>Corporate Law Certification</p>
+
+            </div>
+
+            <div class="cert">
+
+                <i class="fas fa-certificate"></i>
+
+                <p>Cyber Law Specialist</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRACTICE ================= -->
+
+    <section class="practice">
+
+        <h2>Practice Areas</h2>
+
+        <div class="practice-grid">
+
+            <div>Criminal Law</div>
+
+            <div>Civil Litigation</div>
+
+            <div>Family Law</div>
+
+            <div>Corporate Law</div>
+
+            <div>Cyber Law</div>
+
+            <div>Property Law</div>
+
+            <div>Constitutional Law</div>
+
+            <div>Taxation Law</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div>
+
+            <h1>18+</h1>
+
+            <p>Years Experience</p>
+
+        </div>
+
+        <div>
+
+            <h1>2500+</h1>
+
+            <p>Cases Solved</p>
+
+        </div>
+
+        <div>
+
+            <h1>5000+</h1>
+
+            <p>Clients Served</p>
+
+        </div>
+
+        <div>
+
+            <h1>95%</h1>
+
+            <p>Success Rate</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE ================= -->
+
+    <section class="choose">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="choose-grid">
+
+            <div>
+
+                <i class="fas fa-clock"></i>
+
+                <h3>24/7 Legal Support</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-lock"></i>
+
+                <h3>Confidential Consultation</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-file-contract"></i>
+
+                <h3>Transparent Process</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-users"></i>
+
+                <h3>Experienced Team</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIAL ================= -->
+
+    <section class="testimonial">
+
+        <h2>Client Testimonials</h2>
+
+        <div class="review">
+
+            <p>
+
+                "Professional, knowledgeable and highly
+                supportive throughout my legal journey.
+                I highly recommend their services."
+
+            </p>
+
+            <h4>- Rahul Sharma</h4>
+
+        </div>
+
+        <div class="review">
+
+            <p>
+
+                "Outstanding courtroom representation.
+                They achieved the best possible outcome
+                for my case."
+
+            </p>
+
+            <h4>- Neha Verma</h4>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>Need Legal Assistance?</h2>
+
+        <p>
+
+            Schedule your consultation today and let
+            our experienced legal professionals help
+            protect your rights.
+
+        </p>
+
+        <a href="http://127.0.0.1:5500/consultation.html" class="btn">Book Consultation</a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Advocate Portfolio |
+            All Rights Reserved
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

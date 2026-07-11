@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Lawyer | LexJustice</title>
+
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f4f4f4;
+
+        }
+
+
+
+        /* Header */
+
+
+        header {
+
+            height: 80px;
+
+            background: #111827;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 70px;
+
+            color: white;
+
+        }
+
+
+        .logo {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #d4af37;
+
+        }
+
+
+        .logo i {
+
+            margin-right: 10px;
+
+        }
+
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 30px;
+
+            font-size: 17px;
+
+        }
+
+
+
+        nav a:hover {
+
+            color: #d4af37;
+
+        }
+
+
+
+
+
+
+        /* Hero */
+
+
+        .contact-hero {
+
+
+            height: 450px;
+
+
+            background:
+
+                linear-gradient(rgba(0, 0, 0, .7),
+                    rgba(0, 0, 0, .7)),
+
+                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 50px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 20px;
+
+            margin-top: 20px;
+
+        }
+
+
+
+
+
+
+        /* Contact Section */
+
+
+        .contact-section {
+
+
+            display: flex;
+
+            gap: 50px;
+
+            padding: 80px 100px;
+
+        }
+
+
+
+
+        .contact-info {
+
+
+            width: 40%;
+
+            background: #111827;
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+
+        }
+
+
+        .contact-info h2 {
+
+
+            font-size: 35px;
+
+            color: #d4af37;
+
+            margin-bottom: 30px;
+
+
+        }
+
+
+
+        .contact-info p {
+
+            margin: 25px 0;
+
+            font-size: 18px;
+
+        }
+
+
+        .contact-info i {
+
+            color: #d4af37;
+
+            margin-right: 15px;
+
+        }
+
+
+
+
+        .social i {
+
+            font-size: 30px;
+
+            margin: 15px;
+
+        }
+
+
+
+
+
+
+
+        /* Form */
+
+
+        .form-box {
+
+
+            background: white;
+
+            padding: 40px;
+
+            width: 60%;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+        .form-box h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 30px;
+
+            color: #111827;
+
+        }
+
+
+
+        .input-box input,
+        .input-box select,
+        .input-box textarea {
+
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+
+        }
+
+
+
+        textarea {
+
+            height: 120px;
+
+            resize: none;
+
+        }
+
+
+
+        .form-box button {
+
+
+            padding: 15px 35px;
+
+            background: #d4af37;
+
+            border: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+
+        }
+
+
+
+        .form-box button:hover {
+
+            background: #111827;
+
+            color: white;
+
+        }
+
+
+
+
+
+
+
+        /* Emergency */
+
+
+        .emergency {
+
+
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 60px;
+
+
+        }
+
+
+        .emergency h2 {
+
+            font-size: 35px;
+
+            color: #d4af37;
+
+        }
+
+
+        .emergency p {
+
+            margin: 20px;
+
+            font-size: 18px;
+
+        }
+
+
+        .emergency button {
+
+
+            padding: 15px 40px;
+
+            background: #d4af37;
+
+            border: none;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+
+        }
+
+
+
+
+
+
+
+        /* Footer */
+
+
+        footer {
+
+
+            background: black;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+
+        }
+
+
+        footer h3 {
+
+            color: #d4af37;
+
+            font-size: 25px;
+
+        }
+
+
+
+
+
+        /* Responsive */
+
+
+        @media(max-width:900px) {
+
+
+            header {
+
+                flex-direction: column;
+
+                height: auto;
+
+                padding: 20px;
+
+            }
+
+
+            .contact-section {
+
+                flex-direction: column;
+
+                padding: 40px;
+
+            }
+
+
+            .contact-info,
+            .form-box {
+
+                width: 100%;
+
+            }
+
+
+            nav {
+
+                margin-top: 20px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-scale-balanced"></i>
+            LawVerse
+        </div>
+
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Articles</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- Hero Contact Section -->
+
+    <section class="contact-hero">
+
+
+        <div class="overlay">
+
+
+            <h1>
+                Contact Our Legal Experts
+            </h1>
+
+
+            <p>
+                Get professional legal consultation and trusted representation
+                for your legal matters.
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Contact Main Section -->
+
+
+    <section class="contact-section">
+
+
+        <div class="contact-info">
+
+
+            <h2>
+                Get In Touch
+            </h2>
+
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Supreme Court Road, New Delhi, India
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                advocate@lexjustice.com
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                Monday - Saturday : 9:00 AM - 7:00 PM
+            </p>
+
+
+
+
+            <div class="social">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <i class="fa-brands fa-facebook"></i>
+
+                <i class="fa-brands fa-twitter"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Emergency Consultation -->
+
+
+    <section class="emergency">
+
+
+        <h2>
+            Need Immediate Legal Assistance?
+        </h2>
+
+
+        <p>
+            Our experienced advocates are available for urgent legal consultation.
+        </p>
+
+
+        <button>
+            Call Now
+        </button>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+
+    <footer>
+
+
+        <h3>
+            LawVerse Law Firm
+        </h3>
+
+
+        <p>
+            Professional Legal Services | Court Representation | Legal Research
+        </p>
+
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Articles | Advocate Portfolio</title>
+
+    <link rel="stylesheet" href="articles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+
+        /* Header */
+
+        header {
+
+            height: 80px;
+            background: #111827;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 70px;
+
+        }
+
+
+        .logo {
+
+            font-size: 28px;
+            font-weight: bold;
+            color: #d4af37;
+
+        }
+
+
+        .logo i {
+
+            margin-right: 10px;
+
+        }
+
+
+        nav a {
+
+            color: white;
+            text-decoration: none;
+
+            margin-left: 30px;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: #d4af37;
+
+        }
+
+
+
+
+        /* Hero Section */
+
+
+        .hero {
+
+            height: 420px;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)),
+                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+
+            text-align: center;
+
+            padding-top: 100px;
+
+        }
+
+
+
+        .hero h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero p {
+
+            font-size: 20px;
+
+            width: 700px;
+
+            margin: auto;
+
+        }
+
+
+
+
+        .search {
+
+            margin-top: 40px;
+
+        }
+
+
+        .search input {
+
+            width: 400px;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+        }
+
+
+
+        .search button {
+
+            padding: 15px 25px;
+
+            border: none;
+
+            background: #d4af37;
+
+            color: black;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            border-radius: 5px;
+
+        }
+
+
+
+
+
+        /* Categories */
+
+
+        .categories {
+
+            padding: 60px 80px;
+
+            text-align: center;
+
+        }
+
+
+        .categories h2,
+        .articles h2,
+        .publication h2,
+        .cases h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 40px;
+
+            color: #111827;
+
+        }
+
+
+
+
+        .category-box {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+
+        .category-box div {
+
+            background: white;
+
+            padding: 35px 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+
+        }
+
+
+
+        .category-box div:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+
+
+        .category-box i {
+
+            font-size: 40px;
+
+            color: #d4af37;
+
+        }
+
+
+        .category-box h3 {
+
+            margin: 20px 0;
+
+        }
+
+
+
+
+
+
+
+        /* Articles */
+
+
+        .articles {
+
+            padding: 60px 80px;
+
+            background: #fff;
+
+        }
+
+
+
+        .article-container {
+
+            display: flex;
+
+            gap: 30px;
+
+            justify-content: center;
+
+        }
+
+
+
+        .card {
+
+            width: 330px;
+
+            background: #f8fafc;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+        .card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .content {
+
+            padding: 25px;
+
+        }
+
+
+
+        .content h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .content p {
+
+            color: #555;
+
+            line-height: 1.6;
+
+        }
+
+
+
+        .content span {
+
+            display: block;
+
+            margin: 20px 0;
+
+            color: #777;
+
+        }
+
+
+
+        .content button {
+
+            background: #111827;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+
+        .content button:hover {
+
+            background: #d4af37;
+
+            color: black;
+
+        }
+
+
+
+
+
+
+        /* Publications */
+
+
+        .publication {
+
+            padding: 60px 100px;
+
+        }
+
+
+
+        .publication ul {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 10px;
+
+        }
+
+
+
+        .publication li {
+
+            list-style: none;
+
+            padding: 15px;
+
+            border-bottom: 1px solid #ddd;
+
+            font-size: 18px;
+
+        }
+
+
+
+
+
+        /* Case Law */
+
+
+        .cases {
+
+            padding: 60px 80px;
+
+            background: #eef2ff;
+
+        }
+
+
+
+        .case-box {
+
+            display: flex;
+
+            gap: 25px;
+
+        }
+
+
+
+        .case-box div {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            flex: 1;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+
+        }
+
+
+
+        .case-box h3 {
+
+            color: #111827;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+        /* Newsletter */
+
+
+        .newsletter {
+
+            text-align: center;
+
+            padding: 60px;
+
+            background: #111827;
+
+            color: white;
+
+        }
+
+
+
+        .newsletter h2 {
+
+            font-size: 35px;
+
+        }
+
+
+
+        .newsletter input {
+
+            margin-top: 30px;
+
+            width: 350px;
+
+            padding: 15px;
+
+        }
+
+
+
+        .newsletter button {
+
+            padding: 15px 25px;
+
+            background: #d4af37;
+
+            border: none;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+
+
+        /* Footer */
+
+
+        footer {
+
+            background: #000;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #d4af37;
+
+            font-size: 25px;
+
+        }
+
+
+
+        footer i {
+
+            margin: 15px;
+
+            font-size: 25px;
+
+            color: #d4af37;
+
+        }
+
+
+
+
+
+
+        /* Responsive Design */
+
+
+        @media(max-width:900px) {
+
+
+            header {
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                height: auto;
+
+            }
+
+
+            nav {
+
+                margin-top: 20px;
+
+            }
+
+
+
+            .category-box {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .article-container {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+
+            .case-box {
+
+                flex-direction: column;
+
+            }
+
+
+
+        }
+
+
+
+        @media(max-width:600px) {
+
+
+            .category-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .hero p {
+
+                width: auto;
+
+                padding: 20px;
+
+            }
+
+
+            .search input {
+
+                width: 80%;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-scale-balanced"></i>
+            lawVerse
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Practice Areas</a>
+            <a href="#">Articles</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>Legal Articles & Insights</h1>
+
+        <p>
+            Research-based articles on Constitutional Law,
+            Corporate Law, Criminal Law and Judicial Developments.
+        </p>
+
+        <div class="search">
+
+            <input type="text" placeholder="Search legal articles...">
+
+            <button>
+                <i class="fa-solid fa-search"></i>
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>Explore Legal Topics</h2>
+
+
+        <div class="category-box">
+
+            <div>
+                <i class="fa-solid fa-gavel"></i>
+                <h3>Constitutional Law</h3>
+                <p>Fundamental Rights, Judicial Review and Supreme Court judgments.</p>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>Corporate Law</h3>
+                <p>Company regulations, mergers and business compliance.</p>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Criminal Law</h3>
+                <p>CrPC, IPC, Evidence Act and criminal procedures.</p>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Civil Law</h3>
+                <p>Property disputes, contracts and legal remedies.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- Featured Articles -->
+
+
+    <section class="articles">
+
+
+        <h2>Featured Legal Articles</h2>
+
+
+        <div class="article-container">
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
+
+
+                <div class="content">
+
+                    <h3>
+                        Understanding Fundamental Rights Under Indian Constitution
+                    </h3>
+
+                    <p>
+                        A detailed analysis of Articles 12-35 and their role in protecting citizens.
+                    </p>
+
+
+                    <span>
+                        By Advocate Rahul Sharma
+                    </span>
+
+
+                    <button>
+                        Read More
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744">
+
+
+                <div class="content">
+
+                    <h3>
+                        Judicial Review and Power of Supreme Court
+                    </h3>
+
+                    <p>
+                        Exploring constitutional interpretation and landmark judgments.
+                    </p>
+
+
+                    <span>
+                        By Advocate Rahul Sharma
+                    </span>
+
+
+                    <button>
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246">
+
+
+                <div class="content">
+
+                    <h3>
+                        Role of Legal Research in Modern Litigation
+                    </h3>
+
+                    <p>
+                        Importance of case analysis and legal databases for advocates.
+                    </p>
+
+
+                    <span>
+                        By Advocate Rahul Sharma
+                    </span>
+
+
+                    <button>
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Recent Publications -->
+
+
+    <section class="publication">
+
+        <h2>
+            Latest Publications
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Supreme Court Judgments: Analysis of Recent Constitutional Cases
+            </li>
+
+
+            <li>
+                Data Protection Laws and Privacy Rights in India
+            </li>
+
+
+            <li>
+                Artificial Intelligence and Future of Legal Practice
+            </li>
+
+
+            <li>
+                Importance of Alternative Dispute Resolution (ADR)
+            </li>
+
+
+            <li>
+                Environmental Laws and Sustainable Development
+            </li>
+
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Case Law Section -->
+
+
+    <section class="cases">
+
+
+        <h2>
+            Important Case Law Discussions
+        </h2>
+
+
+        <div class="case-box">
+
+
+            <div>
+
+                <h3>
+                    Kesavananda Bharati v. State of Kerala
+                </h3>
+
+                <p>
+                    Basic Structure Doctrine and limitations on Parliament's power.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Maneka Gandhi v. Union of India
+                </h3>
+
+                <p>
+                    Expansion of Article 21 and protection of personal liberty.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Minerva Mills v. Union of India
+                </h3>
+
+                <p>
+                    Balance between Fundamental Rights and Directive Principles.
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Newsletter -->
+
+
+    <section class="newsletter">
+
+
+        <h2>
+            Subscribe For Legal Updates
+        </h2>
+
+
+        <p>
+            Receive latest judgments, legal research papers and law articles.
+        </p>
+
+
+        <input type="email" placeholder="Enter your email">
+
+        <button>
+            Subscribe
+        </button>
+
+
+    </section>
+
+
+
+
+
+
+    <footer>
+
+
+        <h3>
+            lawVerse Law Firm
+        </h3>
+
+        <p>
+            Advocate Portfolio | Legal Research | Court Updates
+        </p>
+
+
+        <div>
+
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

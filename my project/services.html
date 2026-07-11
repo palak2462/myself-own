@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Legal Services | Justice & Associates</title>
+
+    <link rel="stylesheet" href="services.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+        /* ==========================================
+   GOOGLE FONT
+========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+        /* ==========================================
+   RESET
+========================================== */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        :root {
+
+            --primary: #0B1F3A;
+            --gold: #C9A227;
+            --white: #ffffff;
+            --gray: #666;
+
+            --shadow:
+                0 10px 30px rgba(0, 0, 0, .12);
+
+        }
+
+
+
+        /* ==========================================
+   HEADER
+========================================== */
+
+
+        header {
+
+            background: var(--primary);
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+        .logo h2 {
+
+            color: var(--gold);
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+
+        }
+
+
+
+        nav ul li a {
+
+            color: white;
+
+            font-weight: 500;
+
+            transition: .3s;
+
+        }
+
+
+
+        nav ul li a:hover {
+
+            color: var(--gold);
+
+        }
+
+
+
+
+        /* ==========================================
+   HERO SECTION
+========================================== */
+
+
+        .service-hero {
+
+
+            height: 75vh;
+
+
+            background:
+
+                linear-gradient(rgba(11, 31, 58, .85),
+                    rgba(11, 31, 58, .85)),
+
+                url("service-bg.jpg");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .hero-content {
+
+            width: 80%;
+
+            max-width: 900px;
+
+        }
+
+
+
+        .hero-content h1 {
+
+            font-size: 60px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .hero-content p {
+
+            font-size: 20px;
+
+            color: #ddd;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        .hero-content a {
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 15px 40px;
+
+            border-radius: 5px;
+
+            font-weight: 600;
+
+            transition: .3s;
+
+        }
+
+
+
+        .hero-content a:hover {
+
+            background: white;
+
+            color: var(--primary);
+
+        }
+
+
+
+
+        /* ==========================================
+   INTRO SECTION
+========================================== */
+
+
+        .service-intro {
+
+            width: 85%;
+
+            margin: 80px auto;
+
+            text-align: center;
+
+        }
+
+
+
+        .service-intro h2 {
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .service-intro p {
+
+            color: var(--gray);
+
+            font-size: 18px;
+
+        }
+
+
+
+        /* ==========================================
+   SERVICES SECTION
+========================================== */
+
+
+        .services {
+
+            padding: 80px 8%;
+
+            background: white;
+
+        }
+
+
+
+        .services h2 {
+
+            text-align: center;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .service-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .service-card {
+
+
+            background: white;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+            border-bottom: 5px solid transparent;
+
+
+        }
+
+
+
+        .service-card:hover {
+
+
+            transform: translateY(-12px);
+
+            border-bottom: 5px solid var(--gold);
+
+
+        }
+
+
+
+        .service-card i {
+
+
+            font-size: 55px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .service-card h3 {
+
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .service-card p {
+
+
+            color: var(--gray);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .service-card a {
+
+
+            color: var(--gold);
+
+            font-weight: 600;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   SPECIAL SERVICES
+========================================== */
+
+
+        .special-services {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .special-services h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+        .special-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .special-container div {
+
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            box-shadow: var(--shadow);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .special-container div:hover {
+
+            transform: translateY(-8px);
+
+        }
+
+
+
+        .special-container h3 {
+
+            color: var(--primary);
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .special-container p {
+
+            color: var(--gray);
+
+        }
+
+
+
+        /* ==========================================
+   PROCESS SECTION
+========================================== */
+
+
+        .process {
+
+            padding: 90px 8%;
+
+            background: white;
+
+
+        }
+
+
+
+        .process h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .process-box {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .process-box div {
+
+
+            background: #f8f8f8;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+        }
+
+
+
+        .process-box span {
+
+
+            display: inline-block;
+
+            width: 70px;
+
+            height: 70px;
+
+            line-height: 70px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            color: white;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+        .process-box h3 {
+
+            color: var(--primary);
+
+            margin: 20px 0 10px;
+
+        }
+
+
+
+        .process-box p {
+
+            color: var(--gray);
+
+        }
+
+
+
+
+
+        /* ==========================================
+   WHY US SECTION
+========================================== */
+
+
+        .why-us {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .why-us h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .why-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .why-container div {
+
+
+            background: white;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow: var(--shadow);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .why-container div:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .why-container i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+        }
+
+
+
+        .why-container h3 {
+
+            color: var(--primary);
+
+            margin: 15px 0;
+
+        }
+
+
+
+
+
+        /* ==========================================
+   CTA SECTION
+========================================== */
+
+
+        .cta {
+
+
+            padding: 90px 8%;
+
+            text-align: center;
+
+            background: var(--primary);
+
+            color: white;
+
+
+        }
+
+
+
+        .cta h2 {
+
+
+            font-size: 42px;
+
+            color: var(--gold);
+
+        }
+
+
+
+        .cta p {
+
+            margin: 20px;
+
+        }
+
+
+
+        .cta a {
+
+
+            display: inline-block;
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 15px 40px;
+
+            border-radius: 5px;
+
+
+        }
+
+
+
+        /* ==========================================
+   FOOTER
+========================================== */
+
+
+        footer {
+
+
+            background: #081423;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+
+        }
+
+
+
+        /* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+
+            .hero-content h1 {
+
+                font-size: 38px;
+
+            }
+
+
+
+            .hero-content p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .service-intro h2,
+            .services h2,
+            .process h2,
+            .why-us h2 {
+
+                font-size: 30px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                ⚖ Justice & Associates
+            </h2>
+
+        </div>
+
+
+
+
+    </header>
+
+
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+
+    <section class="service-hero">
+
+
+        <div class="hero-content">
+
+
+            <h1>
+                Professional Legal Services
+            </h1>
+
+
+            <p>
+
+                Expert legal solutions designed to protect your
+                rights, business, property and future.
+
+            </p>
+
+
+            <a href="consultation.html">
+
+                Book Consultation
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- ================= INTRO ================= -->
+
+
+    <section class="service-intro">
+
+
+        <h2>
+            Our Legal Expertise
+        </h2>
+
+
+        <p>
+
+            Our law firm provides comprehensive legal services
+            with experienced advocates, strategic planning and
+            client-focused solutions. We handle every case with
+            professionalism, confidentiality and dedication.
+
+        </p>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= MAIN SERVICES ================= -->
+
+
+    <section class="services">
+
+
+        <h2>
+            Our Practice Areas
+        </h2>
+
+
+
+        <div class="service-container">
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-gavel"></i>
+
+
+                <h3>
+                    Criminal Law
+                </h3>
+
+
+                <p>
+
+                    Complete representation in criminal cases,
+                    bail applications, trials, investigations
+                    and legal defense strategies.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-building"></i>
+
+
+                <h3>
+                    Corporate Law
+                </h3>
+
+
+                <p>
+
+                    Business formation, corporate compliance,
+                    contracts, mergers and commercial disputes.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-house"></i>
+
+
+                <h3>
+                    Property Law
+                </h3>
+
+
+                <p>
+
+                    Legal assistance for property disputes,
+                    registration, ownership and real estate matters.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-users"></i>
+
+
+                <h3>
+                    Family Law
+                </h3>
+
+
+                <p>
+
+                    Professional guidance for divorce,
+                    custody, marriage disputes and family matters.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-laptop-code"></i>
+
+
+                <h3>
+                    Cyber Law
+                </h3>
+
+
+                <p>
+
+                    Protection against cybercrime,
+                    online fraud, data theft and digital disputes.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="service-card">
+
+
+                <i class="fas fa-file-contract"></i>
+
+
+                <h3>
+                    Contract Law
+                </h3>
+
+
+                <p>
+
+                    Drafting, reviewing and negotiation of
+                    legal agreements and business contracts.
+
+                </p>
+
+
+                <a href="#">
+                    Learn More
+                </a>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= SPECIAL SERVICES ================= -->
+
+
+    <section class="special-services">
+
+
+        <h2>
+            Specialized Legal Solutions
+        </h2>
+
+
+        <div class="special-container">
+
+
+            <div>
+
+                <h3>
+                    Legal Consultation
+                </h3>
+
+                <p>
+
+                    Personalized legal advice based on your
+                    specific situation and requirements.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Court Representation
+                </h3>
+
+                <p>
+
+                    Strong courtroom representation in
+                    District Courts, High Courts and Tribunals.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Legal Documentation
+                </h3>
+
+                <p>
+
+                    Preparation of agreements, notices,
+                    petitions and legal documents.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= PROCESS ================= -->
+
+
+    <section class="process">
+
+
+        <h2>
+            How We Handle Your Case
+        </h2>
+
+
+
+        <div class="process-box">
+
+
+            <div>
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Initial Consultation
+                </h3>
+
+                <p>
+
+                    Understanding your legal problem.
+
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Case Analysis
+                </h3>
+
+                <p>
+
+                    Research and legal strategy preparation.
+
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Legal Action
+                </h3>
+
+                <p>
+
+                    Representation and professional execution.
+
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Final Resolution
+                </h3>
+
+                <p>
+
+                    Achieving the best possible outcome.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= WHY CHOOSE ================= -->
+
+
+    <section class="why-us">
+
+
+        <h2>
+            Why Choose Our Legal Services?
+        </h2>
+
+
+
+        <div class="why-container">
+
+
+            <div>
+
+                <i class="fas fa-award"></i>
+
+                <h3>
+                    Experienced Advocates
+                </h3>
+
+                <p>
+                    20+ years of legal expertise.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fas fa-user-shield"></i>
+
+                <h3>
+                    Complete Confidentiality
+                </h3>
+
+                <p>
+                    Your information is always protected.
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <i class="fas fa-clock"></i>
+
+                <h3>
+                    Fast Response
+                </h3>
+
+                <p>
+                    Quick legal assistance whenever required.
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <i class="fas fa-scale-balanced"></i>
+
+                <h3>
+                    Result Oriented Approach
+                </h3>
+
+                <p>
+                    Strategic solutions for every case.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= CTA ================= -->
+
+
+    <section class="cta">
+
+
+        <h2>
+            Need Legal Help?
+        </h2>
+
+
+        <p>
+
+            Contact our experienced lawyers today
+            and get professional guidance for your case.
+
+        </p>
+
+
+        <a href="consultation.html">
+
+            Schedule Consultation
+
+        </a>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+
+    <footer>
+
+
+        <p>
+
+            © 2026 Justice & Associates |
+            All Rights Reserved
+
+        </p>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

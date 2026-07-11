@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice Areas | Justice & Associates</title>
+
+    <link rel="stylesheet" href="practice.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ==========================================
+   GOOGLE FONT
+========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+        /* ==========================================
+   RESET
+========================================== */
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f5f5f5;
+            color: #222;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        ul {
+
+            list-style: none;
+
+        }
+
+        :root {
+
+            --primary: #0B1F3A;
+
+            --gold: #C9A227;
+
+            --white: #fff;
+
+            --gray: #666;
+
+            --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+        }
+
+
+
+        /* ==========================================
+   HEADER
+========================================== */
+
+
+        header {
+
+
+            background: var(--primary);
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .logo h2 {
+
+
+            color: var(--gold);
+
+            font-size: 28px;
+
+
+        }
+
+
+
+        nav ul {
+
+
+            display: flex;
+
+            gap: 30px;
+
+
+        }
+
+
+
+        nav ul li a {
+
+
+            color: white;
+
+            font-weight: 500;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        nav ul li a:hover {
+
+
+            color: var(--gold);
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   HERO SECTION
+========================================== */
+
+
+        .practice-hero {
+
+
+            height: 75vh;
+
+
+            background:
+
+                linear-gradient(rgba(11, 31, 58, .85),
+
+                    rgba(11, 31, 58, .85)),
+
+                url("practice-bg.jpg");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .hero-content {
+
+
+            width: 80%;
+
+            max-width: 900px;
+
+            color: white;
+
+
+        }
+
+
+
+        .hero-content h1 {
+
+
+            font-size: 60px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .hero-content p {
+
+
+            font-size: 20px;
+
+            color: #ddd;
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+        .hero-content a {
+
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 15px 40px;
+
+            border-radius: 5px;
+
+            font-weight: 600;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .hero-content a:hover {
+
+
+            background: white;
+
+            color: var(--primary);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   INTRO SECTION
+========================================== */
+
+
+        .practice-intro {
+
+
+            width: 85%;
+
+            margin: 80px auto;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .practice-intro h2 {
+
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .practice-intro p {
+
+
+            color: var(--gray);
+
+            font-size: 18px;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   PRACTICE AREA CARDS
+========================================== */
+
+
+        .practice-area {
+
+
+            background: white;
+
+            padding: 90px 8%;
+
+
+        }
+
+
+
+        .practice-area h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+
+
+        .practice-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 35px;
+
+
+        }
+
+
+
+        .practice-card {
+
+
+            background: white;
+
+            padding: 35px 30px;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+            border-top: 5px solid transparent;
+
+
+        }
+
+
+
+        .practice-card:hover {
+
+
+            transform: translateY(-12px);
+
+            border-top: 5px solid var(--gold);
+
+
+        }
+
+
+
+        .practice-card i {
+
+
+            font-size: 55px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .practice-card h3 {
+
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .practice-card p {
+
+
+            color: var(--gray);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .practice-card ul li {
+
+
+            padding: 8px 0;
+
+            color: #555;
+
+            border-bottom: 1px solid #eee;
+
+
+        }
+
+
+
+        .practice-card ul li::before {
+
+
+            content: "✓";
+
+            color: var(--gold);
+
+            margin-right: 10px;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   LEGAL APPROACH
+========================================== */
+
+
+        .expertise {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .expertise h2 {
+
+
+            text-align: center;
+
+            color: var(--primary);
+
+            font-size: 40px;
+
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+        .expertise-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .expertise-container div {
+
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            box-shadow: var(--shadow);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .expertise-container div:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .expertise-container h3 {
+
+
+            color: var(--gold);
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .expertise-container p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+
+        /* ==========================================
+   STATISTICS
+========================================== */
+
+
+        .stats {
+
+
+            background: var(--primary);
+
+            padding: 70px 8%;
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .stat-box {
+
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .stat-box h1 {
+
+
+            color: var(--gold);
+
+            font-size: 50px;
+
+
+        }
+
+
+
+        .stat-box p {
+
+
+            font-size: 18px;
+
+
+        }
+
+
+
+
+        /* ==========================================
+   CTA SECTION
+========================================== */
+
+
+        .practice-cta {
+
+
+            padding: 90px 8%;
+
+            text-align: center;
+
+            background: white;
+
+
+        }
+
+
+
+        .practice-cta h2 {
+
+
+            color: var(--primary);
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .practice-cta p {
+
+
+            color: var(--gray);
+
+            margin-bottom: 30px;
+
+
+        }
+
+
+
+        .practice-cta a {
+
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 15px 40px;
+
+            border-radius: 5px;
+
+            font-weight: 600;
+
+
+        }
+
+
+
+        .practice-cta a:hover {
+
+
+            background: var(--primary);
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   FOOTER
+========================================== */
+
+
+        footer {
+
+
+            background: #07111f;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   ANIMATION
+========================================== */
+
+
+        .practice-card,
+        .expertise-container div,
+        .stat-box {
+
+
+            animation: fadeUp .8s ease;
+
+
+        }
+
+
+
+        @keyframes fadeUp {
+
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(40px);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+
+                flex-direction: column;
+
+                gap: 20px;
+
+
+            }
+
+
+
+            nav ul {
+
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+
+            }
+
+
+
+            .hero-content h1 {
+
+
+                font-size: 38px;
+
+
+            }
+
+
+
+            .hero-content p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+            .practice-intro h2,
+            .practice-area h2,
+            .expertise h2 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+            .practice-cta h2 {
+
+
+                font-size: 32px;
+
+
+            }
+
+
+        }
+
+
+
+        @media(max-width:480px) {
+
+
+            .hero-content h1 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+            .practice-card {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .stat-box h1 {
+
+
+                font-size: 40px;
+
+
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                ⚖ Justice & Associates
+            </h2>
+
+        </div>
+
+
+
+
+
+    </header>
+
+
+
+
+
+    <!-- ================= HERO ================= -->
+
+
+    <section class="practice-hero">
+
+
+        <div class="hero-content">
+
+
+            <h1>
+                Our Practice Areas
+            </h1>
+
+
+            <p>
+
+                Providing expert legal representation across
+                multiple areas of law with dedication,
+                strategy and professionalism.
+
+            </p>
+
+
+            <a href="consultation.html">
+
+                Consult Our Lawyer
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= INTRO ================= -->
+
+
+    <section class="practice-intro">
+
+
+        <h2>
+            Legal Expertise You Can Trust
+        </h2>
+
+
+        <p>
+
+            Our experienced advocates provide complete legal
+            solutions for individuals, businesses and
+            organizations. We combine legal knowledge,
+            courtroom experience and strategic thinking
+            to protect our client's interests.
+
+        </p>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= PRACTICE CARDS ================= -->
+
+
+    <section class="practice-area">
+
+
+        <h2>
+            Areas of Legal Practice
+        </h2>
+
+
+        <div class="practice-container">
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-gavel"></i>
+
+
+                <h3>
+                    Criminal Law
+                </h3>
+
+
+                <p>
+
+                    Representation in criminal cases,
+                    bail matters, investigations,
+                    trials and appeals.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Criminal Defense</li>
+
+                    <li>Bail Applications</li>
+
+                    <li>Trial Representation</li>
+
+                    <li>Police Matters</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-building"></i>
+
+
+                <h3>
+                    Corporate Law
+                </h3>
+
+
+                <p>
+
+                    Complete legal support for companies,
+                    startups and businesses.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Business Registration</li>
+
+                    <li>Corporate Compliance</li>
+
+                    <li>Business Agreements</li>
+
+                    <li>Legal Advisory</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-house"></i>
+
+
+                <h3>
+                    Property Law
+                </h3>
+
+
+                <p>
+
+                    Solutions for property ownership,
+                    transactions and disputes.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Property Verification</li>
+
+                    <li>Land Disputes</li>
+
+                    <li>Real Estate Deals</li>
+
+                    <li>Registration Issues</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-people-roof"></i>
+
+
+                <h3>
+                    Family Law
+                </h3>
+
+
+                <p>
+
+                    Sensitive handling of family-related
+                    legal matters.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Divorce Cases</li>
+
+                    <li>Child Custody</li>
+
+                    <li>Maintenance</li>
+
+                    <li>Family Settlement</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+
+                <h3>
+                    Cyber Law
+                </h3>
+
+
+                <p>
+
+                    Legal protection against online
+                    fraud and cyber crimes.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Cyber Fraud</li>
+
+                    <li>Data Protection</li>
+
+                    <li>Online Harassment</li>
+
+                    <li>Digital Disputes</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div class="practice-card">
+
+
+                <i class="fa-solid fa-file-contract"></i>
+
+
+                <h3>
+                    Contract Law
+                </h3>
+
+
+                <p>
+
+                    Professional contract drafting,
+                    review and negotiation.
+
+                </p>
+
+
+                <ul>
+
+                    <li>Agreement Drafting</li>
+
+                    <li>Contract Review</li>
+
+                    <li>Legal Notices</li>
+
+                    <li>Business Contracts</li>
+
+                </ul>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- ================= DETAILED EXPERTISE ================= -->
+
+
+    <section class="expertise">
+
+
+        <h2>
+            Our Legal Approach
+        </h2>
+
+
+
+        <div class="expertise-container">
+
+
+            <div>
+
+                <h3>
+                    01. Case Analysis
+                </h3>
+
+                <p>
+
+                    Understanding every legal aspect
+                    before creating a strategy.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    02. Legal Research
+                </h3>
+
+                <p>
+
+                    Studying laws, judgments and
+                    previous cases.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    03. Court Representation
+                </h3>
+
+                <p>
+
+                    Strong representation with
+                    professional advocacy.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    04. Case Resolution
+                </h3>
+
+                <p>
+
+                    Working towards the best possible
+                    legal outcome.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- ================= STATISTICS ================= -->
+
+
+    <section class="stats">
+
+
+        <div class="stat-box">
+
+            <h1>
+                20+
+            </h1>
+
+            <p>
+                Years Experience
+            </p>
+
+        </div>
+
+
+
+        <div class="stat-box">
+
+            <h1>
+                5000+
+            </h1>
+
+            <p>
+                Cases Handled
+            </p>
+
+        </div>
+
+
+
+        <div class="stat-box">
+
+            <h1>
+                95%
+            </h1>
+
+            <p>
+                Client Satisfaction
+            </p>
+
+        </div>
+
+
+
+        <div class="stat-box">
+
+            <h1>
+                15+
+            </h1>
+
+            <p>
+                Legal Experts
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- ================= CTA ================= -->
+
+
+    <section class="practice-cta">
+
+
+        <h2>
+            Need Legal Assistance?
+        </h2>
+
+
+        <p>
+
+            Discuss your case with our experienced lawyers
+            and get professional legal guidance.
+
+        </p>
+
+
+        <a href="consultation.html">
+
+            Book Consultation
+
+        </a>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+
+    <footer>
+
+        <p>
+
+            © 2026 Justice & Associates |
+            Professional Legal Services
+
+        </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>

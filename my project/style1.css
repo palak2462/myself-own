@@ -1,0 +1,788 @@
+/* ============================= */
+/* GOOGLE RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07131f;
+    color: white;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #0d1b2a;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 999;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.logo i {
+
+    color: gold;
+
+    font-size: 30px;
+
+}
+
+.logo h2 {
+
+    color: white;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+
+}
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .4s;
+
+    font-weight: 500;
+
+}
+
+.nav-links a:hover {
+
+    color: gold;
+
+}
+
+.nav-btn {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.login-btn,
+
+.register-btn {
+
+    padding: 10px 25px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: .4s;
+
+}
+
+.login-btn {
+
+    border: 2px solid gold;
+
+    color: gold;
+
+}
+
+.register-btn {
+
+    background: gold;
+
+    color: black;
+
+}
+
+.login-btn:hover {
+
+    background: gold;
+
+    color: black;
+
+}
+
+.register-btn:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+
+    height: 100vh;
+
+    background: url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.overlay {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, .65);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.hero-content {
+
+    width: 70%;
+
+    text-align: center;
+
+}
+
+.hero-content h1 {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+.hero-content p {
+
+    font-size: 18px;
+
+    line-height: 35px;
+
+    margin-bottom: 35px;
+
+}
+
+/* SEARCH */
+
+.search-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+}
+
+.search-box input {
+
+    width: 500px;
+
+    height: 55px;
+
+    border: none;
+
+    outline: none;
+
+    padding-left: 20px;
+
+    border-radius: 40px 0 0 40px;
+
+}
+
+.search-box button {
+
+    width: 170px;
+
+    border: none;
+
+    background: gold;
+
+    cursor: pointer;
+
+    border-radius: 0 40px 40px 0;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.primary-btn,
+
+.secondary-btn {
+
+    padding: 15px 40px;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    transition: .4s;
+
+}
+
+.primary-btn {
+
+    background: gold;
+
+    color: black;
+
+}
+
+.secondary-btn {
+
+    border: 2px solid gold;
+
+    color: gold;
+
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.secondary-btn:hover {
+
+    background: gold;
+
+    color: black;
+
+}
+
+/* ============================= */
+/* STATS */
+/* ============================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+    padding: 80px 8%;
+
+}
+
+.stat-card {
+
+    background: #13283f;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.stat-card h2 {
+
+    color: gold;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+}
+
+/* ============================= */
+/* SECTION TITLE */
+/* ============================= */
+
+.section-title {
+
+    text-align: center;
+
+    margin: 70px 0;
+
+}
+
+.section-title h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+.section-title p {
+
+    color: #ccc;
+
+}
+
+/* ============================= */
+/* PRACTICE */
+/* ============================= */
+
+.practice {
+
+    padding: 20px 8% 90px;
+
+}
+
+.practice-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.practice-card {
+
+    background: #10253b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+}
+
+.practice-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.practice-card img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+
+.practice-card h3 {
+
+    margin: 20px;
+
+}
+
+.practice-card p {
+
+    margin: 20px;
+
+    color: #ddd;
+
+}
+
+.practice-card a {
+
+    display: inline-block;
+
+    margin: 20px;
+
+    color: gold;
+
+    text-decoration: none;
+
+}
+
+/* ============================= */
+/* LAWYERS */
+/* ============================= */
+
+.lawyers {
+
+    padding: 30px 8% 90px;
+
+}
+
+.lawyer-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+.lawyer-card {
+
+    background: #13283f;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding-bottom: 25px;
+
+}
+
+.lawyer-card img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+}
+
+.lawyer-card h3 {
+
+    margin-top: 20px;
+
+}
+
+.lawyer-card span {
+
+    color: gold;
+
+}
+
+.lawyer-card p {
+
+    margin: 15px;
+
+}
+
+.lawyer-card button {
+
+    background: gold;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+}
+
+/* ============================= */
+/* LAW UPDATES */
+/* ============================= */
+
+.updates {
+
+    padding: 30px 8% 90px;
+
+}
+
+.update-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.update-card {
+
+    background: #10253b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.update-card img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+
+.update-card h3 {
+
+    margin: 20px;
+
+}
+
+.update-card p {
+
+    margin: 20px;
+
+    color: #ccc;
+
+}
+
+.update-card a {
+
+    margin: 20px;
+
+    display: inline-block;
+
+    color: gold;
+
+}
+
+/* ============================= */
+/* DIGITAL LIBRARY */
+/* ============================= */
+
+.library {
+
+    padding: 30px 8% 100px;
+
+}
+
+.book-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.book-card {
+
+    background: #13283f;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding-bottom: 25px;
+
+}
+
+.book-card img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+}
+
+.book-card h3 {
+
+    margin: 20px;
+
+}
+
+.book-card button {
+
+    background: gold;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px) {
+
+    .stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .practice-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .lawyer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .book-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .update-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px;
+
+    }
+
+    .nav-links {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        margin: 20px 0;
+
+    }
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+    .search-box input {
+
+        width: 100%;
+
+        border-radius: 40px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .search-box button {
+
+        width: 100%;
+
+        border-radius: 40px;
+
+    }
+
+    .stats,
+
+    .practice-container,
+
+    .lawyer-container,
+
+    .book-container,
+
+    .update-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-content {
+
+        width: 90%;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 35px;
+
+    }
+
+}

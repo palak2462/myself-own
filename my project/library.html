@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Legal Library | Justice & Associates</title>
+
+
+    <link rel="stylesheet" href="library.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ==========================================
+   GOOGLE FONT
+========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+        /* ==========================================
+   RESET
+========================================== */
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f5f5f5;
+
+            color: #222;
+
+        }
+
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        :root {
+
+
+            --primary: #102A43;
+
+            --secondary: #243B53;
+
+            --gold: #D4AF37;
+
+            --white: #ffffff;
+
+            --gray: #627D98;
+
+            --shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ HEADER
+========================================== */
+
+
+        header {
+
+
+            background: var(--primary);
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .logo h2 {
+
+
+            color: var(--gold);
+
+            font-size: 28px;
+
+
+        }
+
+
+
+        nav ul {
+
+
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+
+
+        }
+
+
+
+        nav ul li a {
+
+
+            color: white;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        nav ul li a:hover {
+
+
+            color: var(--gold);
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ HERO SECTION
+========================================== */
+
+
+        .library-hero {
+
+
+            height: 80vh;
+
+
+            background:
+
+                linear-gradient(rgba(16, 42, 67, .9),
+
+                    rgba(16, 42, 67, .9)),
+
+                url("library-bg.jpg");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .library-hero h1 {
+
+
+            font-size: 55px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .library-hero p {
+
+
+            font-size: 20px;
+
+            color: #ddd;
+
+            max-width: 800px;
+
+            margin: auto;
+
+            margin-bottom: 40px;
+
+
+        }
+
+
+
+
+        /* SEARCH BOX */
+
+
+        .search-box {
+
+
+            display: flex;
+
+            justify-content: center;
+
+
+        }
+
+
+
+        .search-box input {
+
+
+            width: 450px;
+
+            padding: 18px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 8px 0 0 8px;
+
+
+        }
+
+
+
+        .search-box button {
+
+
+            padding: 18px 30px;
+
+            background: var(--gold);
+
+            color: white;
+
+            border: none;
+
+            cursor: pointer;
+
+            border-radius: 0 8px 8px 0;
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ CATEGORY SECTION
+========================================== */
+
+
+        .categories {
+
+
+            padding: 80px 8%;
+
+            background: white;
+
+
+        }
+
+
+
+        .categories h2,
+
+
+        .collection h2,
+
+        .judgments h2,
+
+        .archive h2,
+
+        .advocate-tools h2 {
+
+
+            text-align: center;
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 50px;
+
+
+        }
+
+
+
+        .category-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .category-container div {
+
+
+            background: #f8f8f8;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .category-container div:hover {
+
+
+            transform: translateY(-10px);
+
+            background: var(--primary);
+
+            color: white;
+
+
+        }
+
+
+
+        .category-container i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+ BOOK COLLECTION HORIZONTAL SCROLL
+========================================== */
+        .book-card span {
+
+            display: block;
+
+            font-size: 14px;
+
+            color: #666;
+
+            margin: 10px 0;
+
+            line-height: 1.5;
+
+        }
+
+
+        .book-card:hover img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .book-card img {
+
+            transition: .4s;
+
+        }
+
+        .collection {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .scroll-container {
+
+
+            display: flex;
+
+            gap: 30px;
+
+            overflow-x: auto;
+
+            padding-bottom: 25px;
+
+
+        }
+
+
+
+        .scroll-container::-webkit-scrollbar {
+
+            height: 10px;
+
+        }
+
+
+        .scroll-container::-webkit-scrollbar-thumb {
+
+            background: var(--gold);
+
+            border-radius: 20px;
+
+        }
+
+
+
+
+        .book-card {
+
+
+            min-width: 260px;
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .book-card:hover {
+
+
+            transform: translateY(-15px);
+
+
+        }
+
+
+
+        .book-card img {
+
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+
+        }
+
+
+
+        .book-card h3 {
+
+
+            color: var(--primary);
+
+            margin: 15px 0;
+
+
+        }
+
+
+
+        .book-card p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+
+        .book-card button {
+
+
+            margin-top: 15px;
+
+            background: var(--primary);
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 25px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+
+        }
+
+
+
+        .book-card button:hover {
+
+
+            background: var(--gold);
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+ JUDGMENT SECTION
+========================================== */
+
+
+        .judgments {
+
+
+            padding: 90px 8%;
+
+            background: white;
+
+
+        }
+
+
+
+        .judgment-container {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .case-card {
+
+
+            padding: 35px;
+
+            background: #f8f8f8;
+
+            border-left: 5px solid var(--gold);
+
+            box-shadow: var(--shadow);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .case-card:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .case-card h3 {
+
+
+            color: var(--primary);
+
+
+        }
+
+
+
+        .case-card a {
+
+
+            color: var(--gold);
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ DIGITAL ARCHIVE
+========================================== */
+
+
+        .archive {
+
+
+            padding: 90px 8%;
+
+            background: #f5f5f5;
+
+
+        }
+
+
+
+        .archive-grid {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+
+
+        }
+
+
+
+        .archive-grid div {
+
+
+            background: white;
+
+            text-align: center;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+
+
+        }
+
+
+
+        .archive-grid i {
+
+
+            font-size: 50px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        /* ==========================================
+ ADVOCATE TOOLS
+========================================== */
+
+
+        .advocate-tools {
+
+
+            padding: 80px 8%;
+
+            background: white;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .advocate-tools ul {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+
+            list-style: none;
+
+
+        }
+
+
+
+        .advocate-tools li {
+
+
+            padding: 20px;
+
+            background: #f5f5f5;
+
+            border-radius: 10px;
+
+            color: var(--primary);
+
+            font-weight: 600;
+
+
+        }
+
+
+
+
+
+
+
+        /* ==========================================
+ MEMBERSHIP
+========================================== */
+
+
+        .membership {
+
+
+            padding: 90px 8%;
+
+            text-align: center;
+
+            background: var(--primary);
+
+            color: white;
+
+
+        }
+
+
+
+        .membership h2 {
+
+
+            font-size: 40px;
+
+            color: var(--gold);
+
+
+        }
+
+
+
+        .membership button {
+
+
+            margin-top: 30px;
+
+            padding: 15px 40px;
+
+            background: var(--gold);
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ FOOTER
+========================================== */
+
+
+        footer {
+
+
+            background: #07111f;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+
+        }
+
+
+
+
+
+
+        /* ==========================================
+ RESPONSIVE
+========================================== */
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+
+            .library-hero h1 {
+
+                font-size: 35px;
+
+            }
+
+
+
+            .library-hero p {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .search-box {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .search-box input,
+
+            .search-box button {
+
+                width: 100%;
+
+                border-radius: 5px;
+
+            }
+
+
+
+            .categories h2,
+
+            .collection h2,
+
+            .judgments h2,
+
+            .archive h2 {
+
+                font-size: 30px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                ⚖ Legal Research Library
+            </h2>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+
+                <li>
+                    <a href="library.html">Library</a>
+                </li>
+
+
+                <li>
+                    <a href="consultation.html">Consultation</a>
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+
+
+    <!-- ================= HERO ================= -->
+
+
+    <section class="library-hero">
+
+
+        <div>
+
+
+            <h1>
+
+                Advanced Legal Knowledge Center
+
+            </h1>
+
+
+            <p>
+
+                Explore thousands of legal books,
+                judgments, research papers and
+                case studies for professional advocates.
+
+            </p>
+
+
+            <div class="search-box">
+
+
+                <input type="search" placeholder="Search legal books, cases, acts...">
+
+
+                <button>
+
+                    <i class="fa fa-search"></i>
+
+                    Search
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= CATEGORY ================= -->
+
+
+    <section class="categories">
+
+
+        <h2>
+            Explore Legal Collections
+        </h2>
+
+
+
+        <div class="category-container">
+
+
+            <div>
+
+                <i class="fa fa-gavel"></i>
+
+                <h3>
+                    Bare Acts
+                </h3>
+
+                <p>
+                    Updated laws and statutory materials.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fa fa-book"></i>
+
+                <h3>
+                    Law Books
+                </h3>
+
+                <p>
+                    Books from leading legal authors.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fa fa-scale-balanced"></i>
+
+                <h3>
+                    Judgments
+                </h3>
+
+                <p>
+                    Supreme Court and High Court decisions.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fa fa-file"></i>
+
+                <h3>
+                    Research Papers
+                </h3>
+
+                <p>
+                    Legal studies and academic papers.
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ================= BOOK COLLECTION ================= -->
+
+    <section class="collection">
+
+
+        <h2>
+            Complete Legal Book Collection
+        </h2>
+
+
+        <div class="scroll-container">
+
+
+
+            <!-- BOOK 1 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://s3.amazonaws.com/ebcwebstore/images/H-M-Seervai-Doyen-of-Indian-Constitutional-Law-Reprint-LNJPC-MEW.jpg">
+
+                <h3>
+                    Constitutional Law
+                </h3>
+
+                <p>
+                    Author: H.M. Seervai
+                </p>
+
+                <span>
+                    Indian Constitution, Fundamental Rights & Judicial Review
+                </span>
+
+                <button>
+                    <a href="https://www.ebcwebstore.com/product/constitutional-law-of-india-in-3-volumes-h-m-seervai-4th-edition?products_id=16657"
+                        style="color:white; text-decoration:none">
+                        View Book</a>
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- BOOK 2 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://s3.amazonaws.com/ebcwebstore/images/The-Bharatiya-Sakshya-Adhiniyam-2023-Ratanlal-and-Dhirajlal-LexisNexis.jpg">
+
+                <h3>
+                    Criminal Law
+                </h3>
+
+                <p>
+                    Author: Ratanlal & Dhirajlal
+                </p>
+
+                <span>
+                    IPC, Criminal Procedure and Evidence Law
+                </span>
+
+                <button>
+                    <a href="https://www.goodreads.com/author/list/25473046.Ratanlal_Dhirajlal"
+                        style="color:white; text-decoration:none"> View Book</a>
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- BOOK 3 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://s3.amazonaws.com/ebcwebstore/images/mulla-the-key-to-indian-practice-14th-edition.jpg">
+
+                <h3>
+                    Civil Procedure Code
+                </h3>
+
+                <p>
+                    Author: Mulla
+                </p>
+
+                <span>
+                    Complete Civil Litigation Guide
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+            <!-- BOOK 4 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://bharatlawhouse.in/wp-content/uploads/2024/10/Batuk-Lal-The-Law-of-Evidence-by-Central-Law-Agency-24th-Edition-2023.jpg">
+
+                <h3>
+                    Law of Evidence
+                </h3>
+
+                <p>
+                    Author: Batuk Lal
+                </p>
+
+                <span>
+                    Evidence Act, Court Procedures & Practice
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+            <!-- BOOK 5 -->
+
+            <div class="book-card">
+
+                <img src="https://bharatlawhouse.in/wp-content/uploads/2023/03/COMPANY-LAW.jpg">
+
+                <h3>
+                    Company Law
+                </h3>
+
+                <p>
+                    Author: Avtar Singh
+                </p>
+
+                <span>
+                    Corporate Governance & Business Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- BOOK 6 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://store.lexisnexis.com/media/catalog/product/9/7/9789349015715.jpg?width=380&store=ln_in_bs_en&image-type=thumbnail">
+
+                <h3>
+                    Contract Law
+                </h3>
+
+                <p>
+                    Author: Pollock & Mulla
+                </p>
+
+                <span>
+                    Agreements, Contracts & Legal Principles
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- BOOK 7 -->
+
+            <div class="book-card">
+
+                <img src="https://www.bharatilawhouse.com/wp-content/uploads/2024/08/9789348002761-510x789.jpg">
+
+                <h3>
+                    Property Law
+                </h3>
+
+                <p>
+                    Author: Dr. R.K. Bangia
+                </p>
+
+                <span>
+                    Transfer of Property & Real Estate Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- BOOK 8 -->
+
+            <div class="book-card">
+
+                <img src="https://m.media-amazon.com/images/I/61xrjPnioCL.jpg">
+
+                <h3>
+                    Family Law
+                </h3>
+
+                <p>
+                    Author: Paras Diwan
+                </p>
+
+                <span>
+                    Marriage, Divorce & Personal Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- BOOK 9 -->
+
+            <div class="book-card">
+
+                <img src="https://bharatlawhouse.in/wp-content/uploads/2025/12/A1Sp-46qI7L._SL1500_.jpg">
+
+                <h3>
+                    Cyber Law
+                </h3>
+
+                <p>
+                    Author: Pavan Duggal
+                </p>
+
+                <span>
+                    Cyber Crimes, IT Act & Digital Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- BOOK 10 -->
+
+            <div class="book-card">
+
+                <img src="https://bharatlawhouse.in/wp-content/uploads/2026/03/1212.png">
+
+                <h3>
+                    Taxation Law
+                </h3>
+
+                <p>
+                    Author: Dr. Girish Ahuja
+                </p>
+
+                <span>
+                    Income Tax, GST & Financial Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+            <!-- BOOK 11 -->
+
+            <div class="book-card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelJjevLLGNxoxzvwKfawX96AVUJFg2zonlWJs7WUVyYaB-wDSMhHhkdA&s=10">
+
+                <h3>
+                    Labour Law
+                </h3>
+
+                <p>
+                    Author: S.N. Mishra
+                </p>
+
+                <span>
+                    Industrial Relations & Employment Laws
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+
+
+
+            <!-- BOOK 12 -->
+
+            <div class="book-card">
+
+                <img src="https://m.media-amazon.com/images/I/61TiFGwgNdL._AC_UF1000,1000_QL80_.jpg">
+
+                <h3>
+                    International Law
+                </h3>
+
+                <p>
+                    Author: Oppenheim
+                </p>
+
+                <span>
+                    International Relations & Global Law
+                </span>
+
+                <button>
+                    View Book
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= JUDGMENT SECTION ================= -->
+
+
+    <section class="judgments">
+
+
+        <h2>
+            Latest Legal Judgments Archive
+        </h2>
+
+
+        <div class="judgment-container">
+
+
+
+            <div class="case-card">
+
+
+                <h3>
+                    Supreme Court Cases
+                </h3>
+
+
+                <p>
+
+                    Latest constitutional,
+                    criminal and civil judgments.
+
+                </p>
+
+
+                <a href="#">
+                    Explore Cases
+                </a>
+
+
+            </div>
+
+
+
+
+            <div class="case-card">
+
+
+                <h3>
+                    High Court Decisions
+                </h3>
+
+
+                <p>
+
+                    State-wise important court
+                    decisions and orders.
+
+                </p>
+
+
+                <a href="#">
+                    Explore Cases
+                </a>
+
+
+            </div>
+
+
+
+
+            <div class="case-card">
+
+
+                <h3>
+                    Legal Precedents
+                </h3>
+
+
+                <p>
+
+                    Important judgments used
+                    for legal arguments.
+
+                </p>
+
+
+                <a href="#">
+                    Explore Cases
+                </a>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- ================= DIGITAL ARCHIVE ================= -->
+
+
+    <section class="archive">
+
+
+        <h2>
+            Digital Legal Archive
+        </h2>
+
+
+
+        <div class="archive-grid">
+
+
+
+            <div>
+
+                <i class="fa fa-folder-open"></i>
+
+                <h3>
+                    Acts & Rules
+                </h3>
+
+                <p>
+                    Central and State legal acts.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fa fa-newspaper"></i>
+
+                <h3>
+                    Legal Articles
+                </h3>
+
+                <p>
+                    Expert opinions and analysis.
+                </p>
+
+            </div>
+
+
+
+
+            <div>
+
+                <i class="fa fa-graduation-cap"></i>
+
+                <h3>
+                    Research Material
+                </h3>
+
+                <p>
+                    Academic legal resources.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <i class="fa fa-database"></i>
+
+                <h3>
+                    Case Database
+                </h3>
+
+                <p>
+                    Organized legal information.
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ================= ADVOCATE SECTION ================= -->
+
+
+    <section class="advocate-tools">
+
+
+        <h2>
+            Resources For Advocates
+        </h2>
+
+
+
+        <ul>
+
+
+            <li>
+                ✔ Drafting Templates
+            </li>
+
+
+            <li>
+                ✔ Legal Notice Formats
+            </li>
+
+
+            <li>
+                ✔ Court Procedure Guides
+            </li>
+
+
+            <li>
+                ✔ Research Methodology
+            </li>
+
+
+            <li>
+                ✔ Argument Preparation Material
+            </li>
+
+
+            <li>
+                ✔ Legal Dictionary
+            </li>
+
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- ================= MEMBERSHIP ================= -->
+
+
+    <section class="membership">
+
+
+        <h2>
+            Become Premium Legal Research Member
+        </h2>
+
+
+        <p>
+
+            Get unlimited access to legal books,
+            case databases and research material.
+
+        </p>
+
+
+        <button>
+
+            Join Library
+
+        </button>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+
+    <footer>
+
+
+        <p>
+
+            © 2026 Justice & Associates Legal Library
+
+        </p>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<section class="library">
+
+    <div class="section-title">
+
+        <h2>Digital Library</h2>
+
+        <p>
+            Read legal books, Bare Acts and research papers.
+        </p>
+
+    </div>
+
+    <div class="book-container">
+
+        <div class="book-card">
+
+            <img src="https://www.livelaw.in/cms/wp-content/uploads/2016/11/Constitution-of-India.jpg">
+
+            <h3>Indian Constitution | Constitution of India Library</h3>
+
+
+            <button>Read Book</button>
+
+        </div>
+
+        <div class="book-card">
+
+            <img
+                src="https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-scales-books-stack-background-leather.jpg">
+
+            <h3>Criminal Law | Criminal Law Reference Collection</h3>
+
+
+            <button>Read Book</button>
+
+        </div>
+
+        <div class="book-card">
+
+            <img src="https://www.livelaw.in/h-upload/2025/08/23/750x450_616892-indian-contract-act.webp">
+
+            <h3>Contract Act | Contract Law Research Collection</h3>
+
+
+            <button>Read Book</button>
+
+        </div>
+
+        <div class="book-card">
+
+            <img
+                src="https://vajiramias.sgp1.cdn.digitaloceanspaces.com/wp/current-affairs/2025/04/what_is_section_106_of_the_indian_evidence_act.jpg?v=2">
+
+            <h3>Evidence Act | Evidence Law Study Resources</h3>
+
+
+            <button>Read Book</button>
+
+        </div>
+
+    </div>
+
+</section>
