@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .main {
+            height: 100vh;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+
+        }
+
+        .color-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="color-btn">
+
+            <button id="red" style="color:red; background-color:rgb(197, 33, 33)"></button>
+            <button id="blue" style="color:rgb(15, 163, 237);background-color:rgb(15, 163, 237)"></button>
+            <button id="green" style="color:rgb(89, 246, 41); background-color:rgb(89, 246, 41)"></button>
+            <button id="pink" style="color:rgb(237, 91, 181);background-color:rgb(237, 91, 181)"></button>
+            <button id="yellow" style="color:rgb(218, 241, 114);background-color:rgb(218, 241, 114)"></button>
+            <button id="brown" style="color:rgb(118, 85, 10); color:rgb(160, 114, 6)"></button>
+
+        </div>
+    </div>
+
+    <script>
+        let colorBtn = document.querySelector(".color-btn");
+
+
+        colorBtn.addEventListener("click", (e) => {
+            // let child = e.target;
+            let main = document.querySelector(".main");
+            main.style.backgroundColor = e.target.id;
+        })
+
+
+
+    </script>
+</body>
+
+</html>

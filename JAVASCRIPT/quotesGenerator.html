@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Generator</title>
+
+    <style>
+        * {
+            background-color: black;
+            /* justify-content: center;
+            align-items: center; */
+            /* text-align: center; */
+        }
+
+        #thought {
+            font-size: 50px;
+            color: white;
+
+
+        }
+
+        #quotes {
+            background-color: white;
+            color: black;
+            width: 400px;
+            font-size: 25px;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .main {
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="thought"> Honesty Is The Best Policy</h1>
+        <br>
+        <p id="quotes"> Random Quote Generator</p>
+    </div>
+
+    <script>
+
+
+
+
+        let arr = [
+            "Our little time of suffering is not worthy of our first night's welcome home to Heaven.",
+            "I have been driven many times to my knees by the overwhelming conviction that I had nowhere else to go.",
+            "Heaven is full of answers to prayers for which no one ever bothered to ask.",
+            "I have held many things in my hands, and I have lost them all, but whatever I have placed in God's hands, that I still possess.",
+            "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+            "Too many people buy things they don't need with money they don't have to impress people they don't know.  Read Rich Dad, Poor Dad."
+        ];
+
+        let thought = document.getElementById("thought");
+        let quotes = document.getElementById("quotes");
+
+        quotes.addEventListener("click", () => {
+            let r = Math.floor(Math.random() * 6);
+
+            thought.innerHTML = arr[r];
+        });
+        // let s = " ";
+        // for (let i = 1; i < 4; i++) {
+        // let r = Math.floor(Math.random() * 4);
+        // s += ` <h1 id="thought"> ${arr[r]}</h1>`;
+
+        // }
+        // changequotes();
+        // thought.innerHTML = s;
+
+
+    </script>
+</body>
+
+</html>

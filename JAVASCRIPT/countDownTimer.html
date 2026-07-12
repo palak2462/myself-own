@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown Timer </title>
+
+    <style>
+        * {
+            background-color: black;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+
+
+            color: white;
+            height: 80px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="parent"> Birthday Countdown Timer</h1>
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        let result = document.getElementById("result");
+        // let currentTime = Date.now();
+        // let birthdayDate = new Date(2027, 3, 19);
+        // let birthdayTime = birthdayDate.getTime();
+        // let timer = birthdayTime - currentTime;
+
+        setInterval(() => {
+            let currentTime = Date.now();
+            let birthdayDate = new Date(2027, 3, 19);
+            let birthdayTime = birthdayDate.getTime();
+            let timer = birthdayTime - currentTime;
+
+            const days = Math.floor((timer) / (1000 * 60 * 60 * 24));
+            timer %= (1000 * 60 * 60 * 24);
+            const hours = Math.floor((timer) / (1000 * 60 * 60));
+            timer %= (1000 * 60 * 60);
+            const minutes = Math.floor((timer) / (1000 * 60));
+            timer %= (1000 * 60);
+            const seconds = Math.floor((timer) / 1000);
+            timer %= (1000);
+
+
+            result.innerHTML = `${days}: days  ${hours}:hours  ${minutes}:minutes ${seconds}:seconds`;
+
+
+
+        }, 1000);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Segoe UI, sans-serif;
+    }
+
+    body {
+        background: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .calculator {
+        width: 360px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+        overflow: hidden;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header h2 {
+        flex: 1;
+        margin-left: 15px;
+    }
+
+    .menu,
+    .history {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .display {
+        padding: 15px;
+    }
+
+    .display input {
+        width: 100%;
+        height: 90px;
+        border: 2px solid #222;
+        border-radius: 10px;
+        text-align: right;
+        font-size: 60px;
+        padding-right: 15px;
+        outline: none;
+    }
+
+    .memory {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .memory button {
+        border: none;
+        background: #fff;
+        padding: 15px;
+        font-size: 18px;
+        color: #666;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+        background: #ddd;
+    }
+
+    .buttons button {
+        height: 70px;
+        border: none;
+        background: #fafafa;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .buttons button:hover {
+        background: #e8e8e8;
+    }
+
+    .equal {
+        background: #7b1fa2 !important;
+        color: white;
+        font-size: 32px;
+    }
+
+    .equal:hover {
+        background: #6a1b9a !important;
+    }
+</style>
+
+<body>
+
+    <div class="calculator">
+
+        <div class="header">
+            <span class="menu">☰</span>
+            <h2>Standard</h2>
+            <span class="history">🕒</span>
+        </div>
+
+        <div class="display">
+            <input type="text" value="0" readonly>
+        </div>
+
+        <div class="memory">
+            <button>MC</button>
+            <button>MR</button>
+            <button>M+</button>
+            <button>M-</button>
+            <button>MS</button>
+            <button>M▼</button>
+        </div>
+
+        <div class="buttons">
+
+            <button>%</button>
+            <button>CE</button>
+            <button>C</button>
+            <button>⌫</button>
+
+            <button>1/x</button>
+            <button>x²</button>
+            <button>√x</button>
+            <button>÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+
+            <button>±</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal">=</button>
+
+        </div>
+
+    </div>
+    <script>
+        const display = document.getElementById("display");
+
+        const buttons = document.querySelectorAll(".buttons button");
+
+        let current = "";
+        let previous = "";
+        let operator = "";
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                const value = btn.innerText;
+
+                // Numbers
+                if (!isNaN(value) || value === ".") {
+
+                    if (value === "." && current.includes(".")) return;
+
+                    current += value;
+                    display.value = current;
+                }
+
+                // Operators
+                else if (["+", "-", "×", "÷"].includes(value)) {
+
+                    if (current === "") return;
+
+                    previous = current;
+                    current = "";
+                    operator = value;
+                }
+
+                // Equal
+                else if (value === "=") {
+
+                    if (previous === "" || current === "") return;
+
+                    let a = Number(previous);
+                    let b = Number(current);
+                    let result = 0;
+
+                    switch (operator) {
+
+                        case "+":
+                            result = a + b;
+                            break;
+
+                        case "-":
+                            result = a - b;
+                            break;
+
+                        case "×":
+                            result = a * b;
+                            break;
+
+                        case "÷":
+                            result = b === 0 ? "Error" : a / b;
+                            break;
+                    }
+
+                    display.value = result;
+
+                    current = result.toString();
+                    previous = "";
+                    operator = "";
+                }
+
+                // Clear
+                else if (value === "C") {
+
+                    current = "";
+                    previous = "";
+                    operator = "";
+                    display.value = "0";
+                }
+
+                // Clear Entry
+                else if (value === "CE") {
+
+                    current = "";
+                    display.value = "0";
+                }
+
+                // Backspace
+                else if (value === "⌫") {
+
+                    current = current.slice(0, -1);
+
+                    display.value = current || "0";
+                }
+
+                // Plus Minus
+                else if (value === "±") {
+
+                    if (current !== "") {
+
+                        current = (-Number(current)).toString();
+                        display.value = current;
+                    }
+                }
+
+                // Percentage
+                else if (value === "%") {
+
+                    if (current !== "") {
+
+                        current = (Number(current) / 100).toString();
+                        display.value = current;
+                    }
+                }
+
+                // Square
+                else if (value === "x²") {
+
+                    if (current !== "") {
+
+                        current = (Number(current) ** 2).toString();
+                        display.value = current;
+                    }
+                }
+
+                // Square Root
+                else if (value === "√x") {
+
+                    if (current !== "") {
+
+                        current = Math.sqrt(Number(current)).toString();
+                        display.value = current;
+                    }
+                }
+
+                // Reciprocal
+                else if (value === "1/x") {
+
+                    if (current !== "") {
+
+                        current = (1 / Number(current)).toString();
+                        display.value = current;
+                    }
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

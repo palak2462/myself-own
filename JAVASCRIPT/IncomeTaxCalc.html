@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* height: 100vh; */
+
+
+        }
+
+        .main {
+            height: 100vh;
+            /* width: 700px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            left: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: white;
+            width: 700px;
+
+
+        }
+
+        #income {
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            color: black;
+            text-decoration: bold;
+            border-radius: 8px;
+
+
+        }
+
+        button {
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            color: black;
+            text-decoration: bold;
+            border-radius: 8px;
+            margin-top: 10px;
+
+
+        }
+
+        p {
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="heading">Income Tax Calculator</h1>
+        <input type="text" id="income" placeholder="Total Income">
+        <button type="submit" class="submit">Calculate Income</button>
+        <p id="tax">Total Tax: </p>
+
+    </div>
+
+
+
+    <script>
+        // let form = document.querySelector("form");
+        // form.addEventListener("submit", (e) => {
+
+
+
+        let submit = document.querySelector(".submit");
+        submit.addEventListener("click", () => {
+            let income = Number(document.getElementById("income").value);
+
+            let totalTax = 0;
+
+            if (income >= 2400000) {
+                totalTax = income * 0.30;
+            }
+            else if (income < 2400000 && income >= 2000000) {
+                totalTax = income * 0.25;
+            }
+            else if (income < 2000000 && income >= 1600000) {
+                totalTax = income * 0.20;
+            }
+            else if (income < 1600000 && income >= 1200000) {
+                totalTax = income * 0.15;
+            }
+            else if (income < 1200000 && income >= 800000) {
+                totalTax = income * 0.10;
+            }
+            else if (income < 800000 && income >= 400000) {
+                totalTax = income * 0.05;
+            }
+            document.getElementById("tax").innerText =
+                `Total Tax: ₹${totalTax}`;
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
