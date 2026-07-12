@@ -1,1 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Resume | Web Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* Google Font */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd, #f4f6f9);
+            padding: 40px;
+        }
+
+        /* Resume */
+
+        .resume {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Left Section */
+
+        .left {
+            width: 33%;
+            background: linear-gradient(180deg, #0f172a, #1e3a8a);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .profile {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 6px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: .5s;
+        }
+
+        .profile:hover {
+            transform: scale(1.05);
+        }
+
+        .left h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            color: #ffd54f;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        .contact,
+        .skills,
+        .language {
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .contact h2,
+        .skills h2,
+        .language h2 {
+            margin-bottom: 18px;
+            color: #ffd54f;
+            border-bottom: 2px solid rgba(255, 255, 255, .3);
+            padding-bottom: 8px;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 15px;
+        }
+
+        .skills ul,
+        .language ul {
+            list-style: none;
+        }
+
+        .skills li,
+        .language li {
+            background: rgba(255, 255, 255, .15);
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            transition: .4s;
+        }
+
+        .skills li:hover,
+        .language li:hover {
+            background: #ffd54f;
+            color: #000;
+            transform: translateX(8px);
+        }
+
+        /* Right Section */
+
+        .right {
+            width: 67%;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: "";
+            width: 70px;
+            height: 4px;
+            background: #1e3a8a;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            border-radius: 20px;
+        }
+
+        section p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Project Boxes */
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 6px solid #1e3a8a;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            transition: .4s;
+        }
+
+        .box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .18);
+        }
+
+        .box h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            margin: 5px 0;
+        }
+
+        .box ul {
+            margin-left: 20px;
+        }
+
+        .box li {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        /* Lists */
+
+        section ul {
+            margin-left: 20px;
+        }
+
+        section li {
+            margin: 10px 0;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Highlight */
+
+        .highlight {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 17px;
+            line-height: 2;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+        }
+
+        /* Hover Effect */
+
+        section:hover h2 {
+            color: #2563eb;
+        }
+
+        /* Scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 20px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ddd;
+        }
+
+        /* Responsive */
+
+        @media(max-width:992px) {
+
+            .resume {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .profile {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .left {
+                padding: 25px;
+            }
+
+            .right {
+                padding: 25px;
+            }
+
+            .left h1 {
+                font-size: 28px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
+
+            .highlight {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <!-- Left Section -->
+
+        <div class="left">
+
+            <img src="profile.jpg" class="profile">
+
+            <h1>Palak Kumari</h1>
+
+            <p class="title">
+                Front-End Web Developer
+            </p>
+
+            <div class="contact">
+
+                <h2>Contact</h2>
+
+                <p>📞 +91-6202899227</p>
+
+                <p>📧 palaksinghkuri@email.com</p>
+
+                <p>📍ghaziabad,Uttar Pradesh</p>
+
+                <p>🌐 https://github.com/palak2462/myself-own</p>
+
+            </div>
+
+            <div class="skills">
+
+                <h2>Technical Skills</h2>
+
+                <ul>
+
+                    <li>HTML5</li>
+
+                    <li>CSS3</li>
+
+                    <li>JavaScript (ES6)</li>
+
+                    <li>Node.js</li>
+
+                    <li>Responsive Web Design</li>
+
+                    <li>Git & GitHub</li>
+
+                    <li>Bootstrap</li>
+
+                    <li>VS Code</li>
+
+                </ul>
+
+            </div>
+
+            <div class="language">
+
+                <h2>Languages</h2>
+
+                <ul>
+
+                    <li>English</li>
+
+                    <li>Hindi</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Right Section -->
+
+        <div class="right">
+
+            <section>
+
+                <h2>Career Objective</h2>
+
+                <p>
+
+                    Passionate and enthusiastic Computer Science student with
+                    strong knowledge of HTML, CSS, JavaScript, and Node.js.
+                    Interested in building responsive and user-friendly websites.
+                    Seeking a Web Development Internship where I can apply my
+                    technical skills, contribute to real-world projects, and grow
+                    as a professional developer.
+
+                </p>
+
+            </section>
+
+
+
+            <section>
+
+                <h2>Education</h2>
+
+                <div class="box">
+
+                    <h3>Bachelor of Technology</h3>
+
+                    <p>ABES Engineering College,Ghaziabad,Uttar Pradesh</p>
+
+                    <p>Computer Science Engineering(Data Science)</p>
+
+                    <p>2025 - 2029</p>
+
+                </div>
+
+            </section>
+
+
+
+            <section>
+
+                <h2>Technical Projects</h2>
+
+                <div class="box">
+
+                    <h3>Lawyer Portfolio Website</h3>
+
+                    <ul>
+
+                        <li>Designed a professional responsive website.</li>
+
+                        <li>Built using HTML, CSS and JavaScript.</li>
+
+                        <li>blinkit.clone, amazon.clone,and many more javascript project</li>
+
+                        <li>Added responsive navigation and contact section.</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>Student Resume Website</h3>
+
+                    <ul>
+
+                        <li>Created an attractive personal resume website.</li>
+
+                        <li>Fully responsive design.</li>
+
+                        <li>Modern animations and hover effects.</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>Node.js Backend Practice</h3>
+
+                    <ul>
+
+                        <li>Worked with File System Module.</li>
+
+                        <li>Created basic HTTP Server.</li>
+
+                        <li>Learned routing concepts.</li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <section>
+
+                <h2>Strengths</h2>
+
+                <ul>
+
+                    <li>Quick Learner</li>
+
+                    <li>Problem Solving</li>
+
+                    <li>Team Collaboration</li>
+
+                    <li>Strong Communication</li>
+
+                    <li>Creative Thinking</li>
+
+                    <li>Attention to Detail</li>
+
+                </ul>
+
+            </section>
+
+
+
+            <section>
+
+                <h2>Achievements</h2>
+
+                <ul>
+
+                    <li>Developed responsive web applications using HTML, CSS and JavaScript.</li>
+
+                    <li>Strong understanding of Front-End Development.</li>
+
+                    <li>Knowledge of Node.js fundamentals.</li>
+
+                    <li>Experience using Git and GitHub.</li>
+
+                </ul>
+
+            </section>
+
+
+
+            <section>
+
+                <h2>Why Hire Me?</h2>
+
+                <div class="highlight">
+
+                    ✔ Strong foundation in HTML, CSS, JavaScript and Node.js.<br><br>
+
+                    ✔ Ability to create responsive and modern websites.<br><br>
+
+                    ✔ Passionate about learning new technologies quickly.<br><br>
+
+                    ✔ Good understanding of clean code and UI design.<br><br>
+
+                    ✔ Ready to contribute effectively from Day One.
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
