@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 230px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 12px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            background-image: url('Screenshot 2026-05-15 220548.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .time {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .title {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 26px;
+            color: #111;
+        }
+
+        .weight {
+            margin-top: 12px;
+            color: gray;
+            font-size: 18px;
+        }
+
+        .bottom {
+            margin-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .new-price {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: gray;
+            text-decoration: line-through;
+            font-size: 20px;
+        }
+
+        .add-btn {
+            padding: 10px 28px;
+            border: 2px solid green;
+            color: green;
+            background: white;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="card-img"></div>
+
+        <div class="time">⏱ 22 MINS</div>
+
+        <div class="title">
+            Theobroma Eggless <br>
+            Choco Chip Brownie
+        </div>
+
+        <div class="weight">65 g</div>
+
+        <div class="bottom">
+
+            <div class="price">
+                <span class="new-price">₹67</span>
+                <span class="old-price">₹70</span>
+            </div>
+
+            <button class="add-btn">ADD</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
